@@ -1,0 +1,31 @@
+{
+  "name": "Alfoorsa",
+  "description": "App",
+  "main": "index.js",
+  "authors": [
+    ""
+  ],
+  "license": "ISC",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "bower_components",
+    "node_modules",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "^1.5.8",
+    "angular-ui-router": "^0.3.2",
+    "angular-resource": "^1.5.9",
+    "angular-jwt": "^0.1.9",
+    "angular-translate": "^2.15.1",
+    "angular-cookies": "^1.6.3",
+    "angular-translate-loader-static-files": "^2.15.1",
+    "angular-translate-storage-local": "^2.15.1",
+    "bootstrap": "^3.3.7"
+  },
+  "resolutions": {
+    "angular": "1.6.3"
+  }
+}
