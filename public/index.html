@@ -1,0 +1,67 @@
+<html ng-app="Alfoorsa">
+<head>
+  <meta charset="utf-8">
+  <title>Alfoorsa App</title>
+  <!-- inject:js -->
+  <script src="/js/app.js"></script>
+  <!-- endinject -->
+  <!-- inject:css -->
+  <link rel="stylesheet" href="/css/style.css">
+  <!-- endinject -->
+</head>
+<base href="/">
+<body id="bootstrap-overrides">
+  <div class="page-wrap login-page">
+     <div class="container navless-container">
+        <div class="content">
+           <div class="flash-container flash-container-page"></div>
+           <div class="row">
+              <div class="col-sm-5 pull-right new-session-forms-container">
+                 <div>
+                    <ul class="nav nav-links new-session-tabs nav-tabs" role="tablist" ng-init="tab = 1">
+                      <li role="presentation" ng-class="tab === 1? 'active': ''"><a href data-toggle="tab" role="tab" ng-click="tab = 1" aria-expanded="true">Login</a></li>
+                      <li role="presentation" ng-class="tab === 2? 'active': ''"><a href data-toggle="tab" role="tab" ng-click="tab = 2" aria-expanded="true">Register</a></li>
+                    </ul>
+                    <div class="tab-content">
+                       <login-form    ng-if="tab === 1"></login-form>
+                       <register-form ng-if="tab === 2"></register-form>
+                       <div class="clearfix submit-container">
+                          <p>
+                             <span class="light">Didn't receive a confirmation email?</span>
+                             <a href="/users/confirmation/new">Request a new one</a>.
+                          </p>
+                       </div>
+                    </div>
+                    <div class="clearfix">
+                       <div class="omniauth-container">
+                          <p>
+                             <span class="light">
+                             Sign in with &nbsp;
+                             </span>
+                             <span class="light">
+                             <a class="oauth-image-link" rel="nofollow" data-method="post" href><img alt="Google" title="Sign in with Google" src="https://gitlab.com/assets/auth_buttons/google_64-37d98b7033cc7059a484199ffdd766adf69babbc6e5fc64b43006ca866629f17.png"></a>
+                             </span>
+                             <span class="light">
+                             <a class="oauth-image-link" rel="nofollow" data-method="post" href><img alt="Twitter" title="Sign in with Twitter" src="https://gitlab.com/assets/auth_buttons/twitter_64-86860edb139fb2f62fc25ef62a4213a5c8b20122fd8752ab0df09e740eb53deb.png"></a>
+                             </span>
+                             <span class="light">
+                             <a class="oauth-image-link" rel="nofollow" data-method="post" href><img alt="GitHub" title="Sign in with GitHub" src="https://lab.nexedi.cn/kirr/gitlab-ce/raw/8cbbcee33cd6a8d3e03cfa6630300315ea297973/app/assets/images/auth_buttons/facebook_64.png"></a>
+                             </span>
+                          </p>
+                       </div>
+                    </div>
+                 </div>
+              </div>
+           </div>
+        </div>
+     </div>
+  </div>
+<br><br>
+  <input class="form-control form-control-lg" type="text" placeholder=".form-control-lg">
+<br><br>
+  <input class="form-control" type="text" placeholder="Default input">
+<br><br>
+  <input class="form-control form-control-sm" type="text" placeholder=".form-control-sm">
+<br><br>
+</body>
+</html>
