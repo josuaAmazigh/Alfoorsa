@@ -13,10 +13,10 @@
       <div class="remember-me checkbox">
          <label for="user_remember_me">
          <input name="user[remember_me]" type="hidden" value="0"><input type="checkbox" value="1" name="user[remember_me]" id="user_remember_me">
-         <span>Remember me</span>
+         <span>{{ 'REMEMBER' | translate }}</span>
          </label>
          <div class="pull-right forgot-password">
-            <a href="/users/password/new">Forgot your password?</a>
+            <a href="/users/password/new">{{'FORGOT_PASSWORD' | translate }}</a>
          </div>
       </div>
 
