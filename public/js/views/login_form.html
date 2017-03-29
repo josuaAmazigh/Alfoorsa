@@ -13,13 +13,12 @@
       <div class="remember-me checkbox">
          <label for="user_remember_me">
          <input name="user[remember_me]" type="hidden" value="0"><input type="checkbox" value="1" name="user[remember_me]" id="user_remember_me">
-         <span>Remember me</span>
+         <span>{{ 'REMEMBER' | translate }}</span>
          </label>
          <div class="pull-right forgot-password">
-            <a href="/users/password/new">Forgot your password?</a>
+            <a href="/users/password/new">{{'FORGOT_PASSWORD' | translate }}</a>
          </div>
       </div>
-
       <p ng-if="login.errorMessage !== ''" class="gl-field-error hide">{{login.errorMessage}}</p>
       <div class="submit-container move-submit-down">
         <button type="submit" ng-disabled="loginForm.$invalid" class="btn btn-save btn-block">{{ 'LOGIN_FORM.LOGIN' | translate}}</button>
