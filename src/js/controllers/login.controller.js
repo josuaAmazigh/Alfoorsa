@@ -17,7 +17,7 @@ function LoginCtrl($state, $http, API, Multilingual, URL, CustomMethods, TokenSe
       .post(`${API}/login`,  vm.user)
       .then((response) => {
         if(response.data.success){
-          console.log('loggeado');
+          $state.go('home');
         }
       }, function errorCallback(response) {
         Multilingual.translate("ERROR_CODE."+response.data.code, {}  ,(messageTranslated) => {
