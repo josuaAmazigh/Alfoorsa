@@ -19,6 +19,7 @@
             <a href="/users/password/new">{{'FORGOT_PASSWORD' | translate }}</a>
          </div>
       </div>
+      
       <p ng-if="login.errorMessage !== ''" class="gl-field-error hide">{{login.errorMessage}}</p>
       <div class="submit-container move-submit-down">
         <button type="submit" ng-disabled="loginForm.$invalid" class="btn btn-save btn-block">{{ 'LOGIN_FORM.LOGIN' | translate}}</button>
