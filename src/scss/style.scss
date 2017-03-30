@@ -14,6 +14,16 @@ body {
   color: red;
 }
 
+.indexImage{
+  width: 400px;
+  height: 400px;
+}
+
+.imageIcons{
+  width: 30px;
+  height: 30px;
+  background-image: none ;
+}
 #bootstrap-overrides input .form-control,{
     display: block;
     width: 100%;
