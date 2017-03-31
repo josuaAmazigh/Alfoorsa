@@ -10,47 +10,24 @@
 <base href="/">
 <body id="bootstrap-overrides">
   <main ui-view></main>
-  <div class="page-wrap login-page">
-     <div class="container navless-container">
+    <div class="page-wrap login-page">
+      <div class="container navless-container">
         <div class="content">
-           <div class="flash-container flash-container-page"></div>
-           <div class="row">
-               <img src="/images/Joshua.png" class="img-responsive">
-              <div class="col-sm-5 pull-right new-session-forms-container">
-                 <div>
-                    <ul class="nav nav-links new-session-tabs nav-tabs" role="tablist" ng-init="tab = 1">
-                      <li role="presentation" ng-class="tab === 1? 'active': ''"><a href data-toggle="tab" role="tab" ng-click="tab = 1" aria-expanded="true">Login</a></li>
-                      <li role="presentation" ng-class="tab === 2? 'active': ''"><a href data-toggle="tab" role="tab" ng-click="tab = 2" aria-expanded="true">Register</a></li>
-                    </ul>
-                    <div class="tab-content">
-                       <login-form    ng-if="tab === 1"></login-form>
-                       <register-form ng-if="tab === 2"></register-form>
-                       <div class="clearfix submit-container">
-                          <p>
-                             <span class="light">Didn't receive a confirmation email?</span>
-                             <a href="/users/confirmation/new">Request a new one</a>.
-                          </p>
-                       </div>
-                    </div>
-                    <div class="clearfix">
-                       <div class="omniauth-container">
-                          <p>
-                             <span class="light">
-                             Sign in with &nbsp;
-                             </span>
-                             <span class="light">
-                             <a class="oauth-image-link" rel="nofollow" data-method="post" href><img alt="Google" title="Sign in with Google" src="/images/google.png" class="imageIcons"></a>
-                             </span>
-                             <span class="light">
-                             <a class="oauth-image-link" rel="nofollow" data-method="post" href><img alt="Twitter" title="Sign in with Twitter" src="/images/Twitter.png" class="imageIcons"></a>
-                             </span>
-                             <span class="light">
-                             <a class="oauth-image-link" rel="nofollow" data-method="post" href><img alt="GitHub" title="Sign in with Facebook" src="/images/fb-logo.png" class="imageIcons"></a>
-                             </span>
-                          </p>
-                       </div>
-                    </div>
-                 </div>
+          <div class="flash-container flash-container-page"></div>
+          <div class="row">
+            <img src="/images/Joshua.png" class="image img-fluid">
+            <div class="col-sm-5 pull-right new-session-forms-container">
+               <div>
+                  <ul class="nav nav-links new-session-tabs nav-tabs" role="tablist" ng-init="tab = 1">
+                    <li role="presentation" ng-class="tab === 1? 'active': ''"><a href data-toggle="tab" role="tab" ng-click="tab = 1" aria-expanded="true">Login</a></li>
+                    <li role="presentation" ng-class="tab === 2? 'active': ''"><a href data-toggle="tab" role="tab" ng-click="tab = 2" aria-expanded="true">Register</a></li>
+                  </ul>
+                  <div class="tab-content">
+                     <login-form    ng-if="tab === 1"></login-form>
+                     <register-form ng-if="tab === 2"></register-form>
+                  </div>
+                <div class="clearfix"></div>
+               </div>
               </div>
            </div>
         </div>
