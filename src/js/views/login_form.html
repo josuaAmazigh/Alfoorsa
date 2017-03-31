@@ -3,11 +3,11 @@
     <form class="new_user gl-show-field-errors" name="loginForm" method="post" ng-submit="login.login()" novalidate>
       <div class="form-group">
         <label for="email">{{ 'EMAIL' | translate}}</label>
-        <input class="form-control" id="email" type="email" name="email" ng-model="login.user.email" placeholder="{{ 'EMAIL_IE' | translate}}" required/>
+        <input class="form-control" id="email" type="email" name="email" ng-model="login.user.email" required/>
       </div>
       <div class="form-group">
         <label for="password">{{ 'PASSWORD' | translate }}</label>
-        <input class="form-control" id="password" ng-minlength="6" ng-maxlength="20" type="password" name="password" ng-model="login.user.password" placeholder="******" required/>
+        <input class="form-control" id="password" ng-minlength="6" ng-maxlength="20" type="password" name="password" ng-model="login.user.password" required/>
       </div>
 
       <div class="remember-me checkbox">
