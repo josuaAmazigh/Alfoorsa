@@ -54,14 +54,14 @@
     }
   },
   "dependencies": {
-    "angular-ui-bootstrap": "^2.5.0",
     "body-parser": "^1.17.1",
     "bootstrap": "^4.0.0-alpha.6",
     "express": "^4.14.0",
     "forever": "^0.15.3",
     "gulp-replace": "^0.5.4",
     "nodemailer": "^3.1.7",
-    "request-promise": "^4.2.0"
+    "request-promise": "^4.2.0",
+    "tether": "^1.4.0"
   },
   "devDependencies": {
     "babel-cli": "^6.18.0",
