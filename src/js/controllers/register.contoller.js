@@ -16,30 +16,30 @@ function RegisterCtrl($state, $http, API, Multilingual, URL, CustomMethods){
 
   vm.registeros = () => {
     CustomMethods.quitarEspacios(vm.user);
-    let url = `${URL}/activation/3242343423432supertoken`;
-    Multilingual.translate('REGISTER_FORM.EMAIL_ACTIVACTION_MESSAGE',{name: vm.user.name, url_activation: url}  ,(id) => {
-      vm.user.message = id;
-      postMail(vm.user);
-    });
-    // return $http
-    //   .post(`${API}/register`, { user: vm.user })
-    //   .then((response) => {
-    //     if(response.data.success){
-    //       console.log('tas registrado');
-    //       vm.user.token = response.data.token;
-    //       let url = `${URL}/activation/${response.data.token}`;
-    //       Multilingual.translate('REGISTER_FORM.EMAIL_ACTIVACTION_MESSAGE',{name: vm.user.name, url_activation: url}  ,(id) => {
-    //         vm.user.message = id;
-    //         postMail(vm.user);
-    //       });
-    //       vm.errorMessage = '';
-    //     }
-    //   }, function errorCallback(response) {
-    //     Multilingual.translate(response.data.code, {}  ,(messageTranslated) => {
-    //       vm.errorMessage = messageTranslated;
-    //       console.log(vm.errorMessage);
-    //     });
-    //   });
+    // let url = `${URL}/activation/3242343423432supertoken`;
+    // Multilingual.translate('REGISTER_FORM.EMAIL_ACTIVACTION_MESSAGE',{name: vm.user.name, url_activation: url}  ,(id) => {
+    //   vm.user.message = id;
+    //   postMail(vm.user);
+    // });
+    return $http
+      .post(`${API}/register`, { user: vm.user })
+      .then((response) => {
+        if(response.data.success){
+          console.log('tas registrado');
+          vm.user.token = response.data.token;
+          let url = `${URL}/activation/${response.data.token}`;
+          Multilingual.translate('REGISTER_FORM.EMAIL_ACTIVACTION_MESSAGE',{name: vm.user.name, url_activation: url}  ,(id) => {
+            vm.user.message = id;
+            postMail(vm.user);
+          });
+          vm.errorMessage = '';
+        }
+      }, function errorCallback(response) {
+        Multilingual.translate(response.data.code, {}  ,(messageTranslated) => {
+          vm.errorMessage = messageTranslated;
+          console.log(vm.errorMessage);
+        });
+      });
   };
   vm.postData = {};
 

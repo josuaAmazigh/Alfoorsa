@@ -3,16 +3,17 @@ angular
 .controller('MainCtrl', MainCtrl);
 
 MainCtrl.$inject = ['$rootScope', 'CurrentUserService', '$state'];
-function MainCtrl($rootScope, CurrentUserService, $state, User, Meal, Category, Order){
+function MainCtrl($rootScope, CurrentUserService, $state){
   const vm = this;
 
   $rootScope.$on('loggedIn', () => {
     vm.user = CurrentUserService.currentUser;
+    $state.go('home');
   });
 
   $rootScope.$on('loggedOut', () => {
     vm.user = CurrentUserService.currentUser;
-    $state.go('home');
+    $state.go('index');
   });
 
   vm.logout = () => {
