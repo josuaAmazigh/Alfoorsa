@@ -8,12 +8,11 @@ function MainCtrl($rootScope, CurrentUserService, $state){
 
   $rootScope.$on('loggedIn', () => {
     vm.user = CurrentUserService.currentUser;
-    $state.go('home');
   });
 
   $rootScope.$on('loggedOut', () => {
     vm.user = CurrentUserService.currentUser;
-    $state.go('index');
+    // $state.go('index');
   });
 
   vm.logout = () => {

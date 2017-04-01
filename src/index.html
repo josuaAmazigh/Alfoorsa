@@ -4,36 +4,39 @@
   <title>Alfoorsa App</title>
   <!-- inject:js -->
   <!-- endinject -->
+
   <!-- inject:css -->
   <!-- endinject -->
+
+
 </head>
-<base href="/home">
+<base href="/">
 <body id="bootstrap-overrides">
   <main ui-view></main>
-    <div class="page-wrap login-page">
-      <div class="container navless-container">
-        <div class="content">
-          <div class="flash-container flash-container-page"></div>
-          <div id="alfoorsa-override-register-login-row" class="row">
-            <div class="col-sm-7 pull-sm-left">
-              <img src="/images/Alfoorsa.png" class="img-fluid">
-            </div>
-            <div class="col-sm-5 pull-sm-right new-session-forms-container">
-               <div>
-                  <ul class="nav nav-links new-session-tabs nav-tabs" role="tablist" ng-init="tab = 1">
-                    <li role="presentation" ng-class="tab === 1? 'active': ''"><a href data-toggle="tab" role="tab" ng-click="tab = 1" aria-expanded="true">Login</a></li>
-                    <li role="presentation" ng-class="tab === 2? 'active': ''"><a href data-toggle="tab" role="tab" ng-click="tab = 2" aria-expanded="true">Register</a></li>
-                  </ul>
-                  <div class="tab-content">
-                     <login-form    ng-if="tab === 1"></login-form>
-                     <register-form ng-if="tab === 2"></register-form>
-                  </div>
-                <div class="clearfix"></div>
-               </div>
+  <div class="page-wrap login-page">
+    <div class="container navless-container">
+      <div class="content">
+        <div class="flash-container flash-container-page"></div>
+        <div id="alfoorsa-override-register-login-row" class="row">
+          <div class="col-sm-7 pull-sm-left">
+            <img src="/images/Alfoorsa.png" class="img-fluid">
+          </div>
+          <div class="col-sm-5 pull-sm-right new-session-forms-container">
+            <div>
+              <ul class="nav nav-links new-session-tabs nav-tabs" role="tablist" ng-init="tab = 1">
+                <li role="presentation" ng-class="tab === 1? 'active': ''"><a href data-toggle="tab" role="tab" ng-click="tab = 1" aria-expanded="true">Login</a></li>
+                <li role="presentation" ng-class="tab === 2? 'active': ''"><a href data-toggle="tab" role="tab" ng-click="tab = 2" aria-expanded="true">Register</a></li>
+              </ul>
+              <div class="tab-content">
+                <login-form    ng-if="tab === 1"></login-form>
+                <register-form ng-if="tab === 2"></register-form>
               </div>
-           </div>
+              <div class="clearfix"></div>
+            </div>
+          </div>
         </div>
-     </div>
+      </div>
+    </div>
   </div>
 </body>
 </html>
