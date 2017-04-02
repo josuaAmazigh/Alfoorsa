@@ -12,7 +12,7 @@ function MainCtrl($rootScope, CurrentUserService, $state, Multilingual){
 
   $rootScope.$on('loggedOut', () => {
     vm.user = CurrentUserService.currentUser;
-    // $state.go('index');
+    $state.go('home');
   });
 
   vm.logout = () => {
