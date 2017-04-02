@@ -8,10 +8,14 @@ function Router($stateProvider, $locationProvider, $urlRouterProvider){
 
   $stateProvider
   .state('home', {
-    url: '/home',
+    url: '/',
     templateUrl: '/js/views/home.html',
     controller: 'MainCtrl',
     controllerAs: 'main'
+  })
+  .state('session', {
+    url: '/session',
+    templateUrl: '/js/views/session.html'
   });
   // .state('profile', {
   //   url: '/profile',
