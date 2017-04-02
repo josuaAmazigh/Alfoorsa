@@ -2,8 +2,8 @@ angular
 .module('Alfoorsa')
 .controller('LoginCtrl', LoginCtrl);
 
-LoginCtrl.$inject = ['$state', '$http', 'API', 'Multilingual', 'URL', 'CustomMethods', 'TokenService'];
-function LoginCtrl($state, $http, API, Multilingual, URL, CustomMethods, TokenService){
+LoginCtrl.$inject = ['$state', '$http', 'API', 'Multilingual', 'URL', 'CustomMethods', 'TokenService', 'CurrentUserService'];
+function LoginCtrl($state, $http, API, Multilingual, URL, CustomMethods, TokenService, CurrentUserService){
   const vm = this;
 
   vm.Multilingual  = Multilingual;
@@ -18,11 +18,13 @@ function LoginCtrl($state, $http, API, Multilingual, URL, CustomMethods, TokenSe
       .post(`${API}/login`,  vm.user)
       .then((response) => {
         if(response.data.success){
-          $state.go('home');
+          CurrentUserService.getUser();
         }
       }, function errorCallback(response) {
-        Multilingual.translate("ERROR_CODE."+response.data.code, {}  ,(messageTranslated) => {
+        Multilingual.translate("ERROR_CODES."+response.data.code, {}  ,(messageTranslated) => {
           vm.errorMessage = messageTranslated;
+          console.log(response.data.code);
+          console.log(messageTranslated);
         });
       });
   };

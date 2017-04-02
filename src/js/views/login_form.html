@@ -10,7 +10,7 @@
         <input class="form-control" id="password" ng-minlength="6" ng-maxlength="20" type="password" name="password" ng-model="login.user.password" required/>
       </div>
 
-      <p ng-if="login.errorMessage !== ''" class="gl-field-error hide">{{login.errorMessage}}</p>
+      <p ng-if="login.errorMessage !== ''">{{login.errorMessage}}</p>
       <div class="submit-container move-submit-down">
         <button type="submit" ng-disabled="loginForm.$invalid" class="btn btn-save btn-block">{{ 'LOGIN_FORM.LOGIN' | translate}}</button>
       </div>

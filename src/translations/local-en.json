@@ -35,7 +35,8 @@
     "AC6010":	"Min lenght 6 characters",
     "AC6011":	"The password confirmation does not match",
     "AC6012":	"The email is not valid",
-    "AC6013":	"An user with this email already exist"
+    "AC6013":	"An user with this email already exist",
+    "AC6014": "Your email or password is not correct"
   },
 
   "LOGIN_FORM": {
