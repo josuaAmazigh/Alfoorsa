@@ -13,6 +13,7 @@ function LoginCtrl($state, $http, API, Multilingual, URL, CustomMethods, TokenSe
 
   vm.login = () => {
     CustomMethods.quitarEspacios(vm.user);
+    TokenService.removeToken();
     return $http
       .post(`${API}/login`,  vm.user)
       .then((response) => {

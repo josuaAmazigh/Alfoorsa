@@ -19,6 +19,11 @@ body {
   height: 400px;
 }
 
+.icon_dropdown{
+  padding-right: 18px;
+}
+
+
 @media screen and (max-width: 574px){
   #alfoorsa-override-register-login-row{ flex-direction:column-reverse }
 }

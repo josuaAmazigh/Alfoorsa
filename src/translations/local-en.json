@@ -41,5 +41,12 @@
   "LOGIN_FORM": {
     "LOGIN": "Login",
     "FORGOT_PASSWORD": "Forgot your password?"
+  },
+
+  "NAV_VAR": {
+    "WELCOME": "Welcome",
+    "PROFILE": "Profile",
+    "LOG_OUT": "Log out"
   }
+
 }

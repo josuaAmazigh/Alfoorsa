@@ -5,20 +5,16 @@
   <a class="navbar-brand img-fluid" ui-sref="home"><img src="/images/Alfoorsa.png" class="imageIcons" alt=""></a>
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav ml-auto">
-      <a class="navbar-brand img-fluid" ui-sref="home">Welcome {{main.user.name}}</a>
-      <!-- <a href="#"><i class="fa fa-bath" aria-hidden="true"></i></a> -->
-
-    <li class="nav-item dropdown">
+      <a class="navbar-brand img-fluid" ui-sref="profile">{{ 'NAV_VAR.WELCOME' | translate }} {{main.user.name}}</a>
+    <li class="nav-item">
         <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          <img src="/images/profile-logo.png" class="imageIcons img-fluid" alt="">
+          <i class="fa fa-user fa-2x" aria-hidden="true"></i>
         </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-          <a class="dropdown-item" href="#">Action</a>
-          <a class="dropdown-item" href="#">Another action</a>
-          <a class="dropdown-item" href="#">Something else here</a>
+        <div class="dropdown-menu" style="right: 0; left: auto;" aria-labelledby="navbarDropdownMenuLink">
+          <a class="dropdown-item" ui-sref="profile"><i class="fa fa-user icon_dropdown" aria-hidden="true"></i>{{ 'NAV_VAR.PROFILE' | translate }}</a>
+          <a class="dropdown-item" href="#"><i class="fa fa-sign-out icon_dropdown" aria-hidden="true"></i>{{ 'NAV_VAR.LOG_OUT' | translate }}</a>
         </div>
       </li>
     </ul>
-
   </div>
 </nav>

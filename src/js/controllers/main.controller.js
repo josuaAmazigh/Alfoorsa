@@ -2,8 +2,8 @@ angular
 .module('Alfoorsa')
 .controller('MainCtrl', MainCtrl);
 
-MainCtrl.$inject = ['$rootScope', 'CurrentUserService', '$state'];
-function MainCtrl($rootScope, CurrentUserService, $state){
+MainCtrl.$inject = ['$rootScope', 'CurrentUserService', '$state', 'Multilingual'];
+function MainCtrl($rootScope, CurrentUserService, $state, Multilingual){
   const vm = this;
 
   $rootScope.$on('loggedIn', () => {
