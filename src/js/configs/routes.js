@@ -21,12 +21,11 @@ function Router($stateProvider, $locationProvider, $urlRouterProvider){
     controller: 'famososCtrl',
     controllerAS: 'famosos',
     resolve: {
-      validate: function($q, $location, CurrentUserService) {
+      validate: function($q, $location, $state, CurrentUserService) {
         var validateAccess = $q.defer();
         if (CurrentUserService !== null && CurrentUserService.currentUser !== null && CurrentUserService.currentUser.role === 'ADMIN') {
           validateAccess.resolve();
         }else{
-          validateAccess.reject();
           $location.url('/session');
         }
         return validateAccess.promise;
