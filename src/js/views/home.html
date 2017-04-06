@@ -13,6 +13,7 @@
         <div class="dropdown-menu" style="right: 0; left: auto;" aria-labelledby="navbarDropdownMenuLink">
           <a class="dropdown-item" ui-sref="profile"><i class="fa fa-user icon_dropdown" aria-hidden="true"></i>{{ 'NAV_VAR.PROFILE' | translate }}</a>
           <a class="dropdown-item" ui-sref="home" ng-click="main.logout()"><i class="fa fa-sign-out icon_dropdown" aria-hidden="true"></i>{{ 'NAV_VAR.LOG_OUT' | translate }}</a>
+          <a class="dropdown-item" href="/eraseunavezalguienfamoso"><i class="fa fa-sign-out icon_dropdown" aria-hidden="true"></i>Users</a>
         </div>
       </li>
     </ul>
@@ -23,3 +24,5 @@
     </ul>
   </div>
 </nav>
+
+{{main.user}}
