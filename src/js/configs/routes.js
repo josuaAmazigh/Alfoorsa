@@ -8,7 +8,7 @@ function Router($stateProvider, $locationProvider, $urlRouterProvider){
 
   $stateProvider
   .state('home', {
-    url: '/',
+    url: '/home',
     templateUrl: '/js/views/home.html'
   })
   .state('session', {
