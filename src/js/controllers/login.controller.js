@@ -19,6 +19,7 @@ function LoginCtrl($state, $http, API, Multilingual, URL, CustomMethods, TokenSe
       .then((response) => {
         if(response.data.success){
           CurrentUserService.getUser();
+          $state.go('home');
         }
       }, function errorCallback(response) {
         Multilingual.translate("ERROR_CODES."+response.data.code, {}  ,(messageTranslated) => {
