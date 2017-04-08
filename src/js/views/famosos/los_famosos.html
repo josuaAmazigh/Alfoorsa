@@ -1,4 +1,10 @@
 
+<div class="btn-group" role="group" aria-label="Basic example">
+  <button type="button" class="btn btn-secondary" ng-click="famosos.getUsers()"><span ng-show="famosos.countReviews.length !== 0" class="badge badge-color">{{famosos.countReviews.length}}</span>Users</button>
+  <button type="button" class="btn btn-secondary">Business</button>
+  <button type="button" class="btn btn-secondary">Stores</button>
+</div>
+
 
 <table class="table table-bordered table-sm" ng-show="famosos.listUsers">
   <thead>
@@ -9,9 +15,7 @@
       <th>Phone</th>
       <th>Email</th>
       <th>Type</th>
-      <th>Business</th>
       <th>Need Review</th>
-      <th>Email Verified</th>
     </tr>
   </thead>
   <tbody>
@@ -22,17 +26,7 @@
       <td>{{user.tel}}</td>
       <td>{{user.email}}</td>
       <td>{{user.type}}</td>
-      <td>{{user.businesses}}</td>
       <td>{{user.needreview}}</td>
-      <td>{{user.emailVerified}}</td>
     </tr>
   </tbody>
 </table>
-
-
-
-<div class="btn-group" role="group" aria-label="Basic example">
-  <button type="button" class="btn btn-secondary" ng-click="famosos.getUsers()"><span ng-show="user.needreview !== false" class="badge badge-color"></span>Users</button>
-  <button type="button" class="btn btn-secondary">Business</button>
-  <button type="button" class="btn btn-secondary">Stores</button>
-</div>

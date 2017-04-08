@@ -17,7 +17,7 @@ function famososCtrl(CurrentUserService, $state, Multilingual, Users){
     .then(data => {
       console.log(data);
       vm.listUsers = data.users;
-      countReviews(data.users.needreview);
+      vm.countReviews(data.users.needreview);
     }, function errcalback(error){
       console.log(error);
     });
