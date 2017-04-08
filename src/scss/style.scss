@@ -1,3 +1,9 @@
+@font-face {
+    font-family: logoFont;
+    src: url(../fonts/ARJULIAN.ttf);
+    font-weight: bold;
+}
+
 body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   font-size: 14px;
@@ -28,9 +34,27 @@ body {
   #alfoorsa-override-register-login-row{ flex-direction:column-reverse }
 }
 
+#brand{
+  font-family: logoFont;
+  font-size: 3em;
+  color: #4b0a3e;
+  padding: 0px;
+  margin: 0px;
+}
+
+#brand span#FA{
+  font-size: 1.6em;
+  position: relative;
+  padding-bottom: 0px;
+  padding-top: 0px;
+  line-height: 1px;
+  top: 9px;
+}
+
+/*350x544*/
 .imageIcons{
   width: 30px;
-  height: 30px;
+  height: 47px;
   background-image: none ;
 }
 .login-page .new-session-tabs {
