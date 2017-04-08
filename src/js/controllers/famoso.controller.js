@@ -6,7 +6,6 @@ famososCtrl.$inject = ['CurrentUserService', '$state', 'Multilingual', 'Users'];
 function famososCtrl(CurrentUserService, $state, Multilingual, Users){
   const vm = this;
 
-  console.log(CurrentUserService.currentUser);
   if(CurrentUserService.currentUser.role !== 'ADMIN'){
     $state.go('home');
   }
