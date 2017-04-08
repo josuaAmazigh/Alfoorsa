@@ -32,12 +32,13 @@ function Router($stateProvider, $locationProvider, $urlRouterProvider){
     resolve: {needAuthentication},
     controller: 'famososCtrl',
     controllerAs: 'famosos'
+  })
+  .state('profile', {
+    url: '/profile',
+    templateUrl: '/js/views/users/user_profile.html',
+    resolve: {needAuthentication},
+    controller: 'profileCtrl',
+    controllerAs: 'profile'
   });
-  // .state('profile', {
-  //   url: '/profile',
-  //   templateUrl: '',
-  //   controller: 'MainCtrl',
-  //   controllerAs: 'main'
-  // });
   $urlRouterProvider.otherwise('/');
 }
