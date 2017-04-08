@@ -1,0 +1,70 @@
+* [33m7369716[m[33m ([m[1;36mHEAD -> [m[1;32mjos[m[33m, [m[1;31morigin/premaster[m[33m, [m[1;32mpremaster[m[33m)[m fixing errors
+* [33m4e23f6e[m fixing bug in stateProider Authentication
+* [33mf412864[m Remove unnecessary code in stateProvider Authentication
+* [33m9d31839[m  with authentication
+* [33m7d01202[m $stateProvider with authentication
+* [33m1e2421b[m Fix broadcast issue when you refresh page
+* [33ma509fc4[m Change the state to session when loggout
+* [33m0c7033f[m Adding home view and create navbar directive
+* [33m90a7175[m deleting console.log from routes.js and setting the ui-sref attribute instead of href attribute
+* [33md34064d[m check if the user logged is an Admin in the stateProviderODODODODODlogged user has the ADMIN role in stthe stateProvider
+* [33m1600ecf[m Adding famoso views, arrange folders and half way of route protection
+* [33mefee5d2[m Fixing the main controller
+* [33m97e3e06[m Drying the code into directives
+* [33med4579a[m Adding directive template login-register
+* [33mbd6559e[m Fixing errors and adding translations
+* [33m6082fca[m Adding logout
+* [33m169b154[m Fixing navbar icon, position and removetoken when login again
+* [33m0f4a848[m Deleting a console log
+*   [33m866c363[m Merge branch 'premaster' of github.com:josuaAmazigh/Alfoorsa into ismael
+[32m|[m[33m\[m  
+[32m|[m * [33m89a16f0[m Readme
+[32m|[m * [33mc0112df[m add favicon
+[32m|[m * [33md4e691f[m se quita comentario del fichero de style y se desinstala jwthelper
+[32m|[m *   [33m169d050[m Merge branch 'premaster' of github.com:josuaAmazigh/Alfoorsa into premaster
+[32m|[m [34m|[m[35m\[m  
+[32m|[m [34m|[m * [33m0269778[m Tether dependencies
+* [34m|[m [35m|[m [33m1777c5a[m Deleting helper package
+[34m|[m[34m/[m [35m/[m  
+* [35m|[m [33mf707413[m Adding events, veryfing token and nav bar was added
+* [35m|[m   [33m0a72e1f[m Merge branch 'premaster' of github.com:josuaAmazigh/Alfoorsa into ismael
+[36m|[m[35m\[m [35m\[m  
+[36m|[m [35m|[m[35m/[m  
+[36m|[m * [33m6999d2b[m Logo vectorial
+* [1;31m|[m   [33m7ffab74[m Merge branch 'premaster' of github.com:josuaAmazigh/Alfoorsa into ismael
+[1;32m|[m[1;31m\[m [1;31m\[m  
+[1;32m|[m [1;31m|[m[1;31m/[m  
+[1;32m|[m * [33m9c92e66[m Logo responsive
+* [1;33m|[m [33m5e55119[m The winter is comming
+[1;33m|[m[1;33m/[m  
+* [33m2a847a3[m URL API modified
+* [33mb5fd9b8[m Cleaning unuseful images
+* [33mb99cbbf[m nueva imagen
+* [33m9e7906c[m Modificacion del formulario de login
+* [33mc6585a4[m Modificacion estilo campos form-control
+* [33m597fd64[m modificacion del estilo de las pestañas login y registro
+* [33mecd009e[m eliminación de los placeholder y corrección de errores en las validaciones del registro
+* [33m06e1e43[m imagen de inicio responsive y modificacion del formulario de login-register
+* [33m3f1daf3[m Adding nav bar to home and icons
+*   [33mfe745cb[m Merge branch 'premaster' of github.com:josuaAmazigh/Alfoorsa into ismaelo
+[1;34m|[m[1;35m\[m  
+[1;34m|[m * [33mc294265[m traducciones en el login form
+[1;34m|[m * [33m2ada97e[m traduccion en el login form
+* [1;35m|[m [33m9d1676e[m Adding home view, route and state to login
+[1;35m|[m[1;35m/[m  
+* [33m069d131[m traducciones
+* [33m129bbf6[m corrección de traducciones
+* [33m3abbdda[m testing merge
+* [33m9bf184c[m traducciones para el fomulario de login
+* [33m937dc66[m traducciones para el fomulario de login
+* [33mf3c0d66[m[33m ([m[1;31morigin/testing[m[33m)[m probando cambios
+*   [33m8981e04[m resolving conflicts
+[1;36m|[m[31m\[m  
+[1;36m|[m * [33me8f9adb[m[33m ([m[1;31morigin/master[m[33m, [m[1;31morigin/HEAD[m[33m)[m Restoring files to Github
+[1;36m|[m * [33m2069cef[m Revert "Revert "Initial commit""
+[1;36m|[m * [33m08e79f4[m Revert "Initial commit"
+* [31m|[m [33m270bfa4[m[33m ([m[1;32mmaster[m[33m)[m ignore files
+* [31m|[m [33mdc034b4[m Locally push it to Github
+* [31m|[m [33mee7cfc1[m Testing
+[31m|[m[31m/[m  
+* [33m99ff79d[m Initial commit
