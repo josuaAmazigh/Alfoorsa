@@ -6,13 +6,17 @@ famososCtrl.$inject = ['CurrentUserService', '$state', 'Multilingual', 'Users'];
 function famososCtrl(CurrentUserService, $state, Multilingual, Users){
   const vm = this;
 
-  // vm.getUsers = () => {
-  //   Users
-  //   .get()
-  //   .$promise
-  //   .then(data => {
-  //     console.log(data);
-  //   });
-  // };
+  console.log(CurrentUserService.currentUser);
+  if(CurrentUserService.currentUser.role !== 'ADMIN'){
+    $state.go('home');
+  }
 
+  vm.getUsers = () => {
+    Users
+    .get()
+    .$promise
+    .then(data => {
+      console.log(data);
+    });
+  };
 }

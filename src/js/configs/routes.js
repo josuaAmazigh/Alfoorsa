@@ -6,6 +6,10 @@ Router.$inject = ['$stateProvider', '$locationProvider', '$urlRouterProvider'];
 function Router($stateProvider, $locationProvider, $urlRouterProvider){
   $locationProvider.html5Mode(true);
 
+  var needAuthentication = (User) => {
+    return (User.get().$promise);
+  };
+
   $stateProvider
   .state('home', {
     url: '/home',
@@ -18,19 +22,8 @@ function Router($stateProvider, $locationProvider, $urlRouterProvider){
   .state('erdamatuput', {
     url: '/eraseunavezalguienfamoso',
     templateUrl: '/js/views/famosos/los_famosos.html',
-    controller: 'famososCtrl',
-    controllerAS: 'famosos',
-    resolve: {
-      validate: function($q, $location, $state, CurrentUserService) {
-        var validateAccess = $q.defer();
-        if (CurrentUserService !== null && CurrentUserService.currentUser !== null && CurrentUserService.currentUser.role === 'ADMIN') {
-          validateAccess.resolve();
-        }else{
-          $location.url('/session');
-        }
-        return validateAccess.promise;
-      }
-    }
+    resolve: {needAuthentication},
+    controller: 'famososCtrl as famosos'
   });
   // .state('profile', {
   //   url: '/profile',
