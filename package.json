@@ -29,7 +29,7 @@
       "js": "app.js",
       "activation": "activation.page.html",
       "index": "index.html",
-      "scss": "style.scss",
+      "scss": "**/*.scss",
       "server": "index.js",
       "gulpfile": "gulpfile.js",
       "packageJson": "package.json"
