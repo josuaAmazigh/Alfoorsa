@@ -1,1 +1,21 @@
 <h1>Hola famoso</h1>
+
+<button class="btn btn-primary" ng-click="famosos.getUsers()">Users</button>
+
+<div ng-show="famosos.listUsers">
+  <li ng-repeat="user in famosos.listUsers">
+    <p>{{user.name}}, {{user.lastname}}</p>
+  </li>
+</div>
+
+<div class="tabs">
+  <a class="tab active" href="#">
+    <p>Users</p>
+  </a>
+  <a class="tab active" href="#">
+    <p>Busines</p>
+  </a>
+  <a class="tab active" href="#">
+    <p>Stores</p>
+  </a>
+</div>

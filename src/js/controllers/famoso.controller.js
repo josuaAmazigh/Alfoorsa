@@ -16,6 +16,9 @@ function famososCtrl(CurrentUserService, $state, Multilingual, Users){
     .$promise
     .then(data => {
       console.log(data);
+      vm.listUsers = data.users;
+    }, function errcalback(error){
+      console.log(error);
     });
   };
 }

@@ -24,8 +24,6 @@ function LoginCtrl($state, $http, API, Multilingual, URL, CustomMethods, TokenSe
       }, function errorCallback(response) {
         Multilingual.translate("ERROR_CODES."+response.data.code, {}  ,(messageTranslated) => {
           vm.errorMessage = messageTranslated;
-          console.log(response.data.code);
-          console.log(messageTranslated);
         });
       });
   };

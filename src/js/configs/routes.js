@@ -23,7 +23,8 @@ function Router($stateProvider, $locationProvider, $urlRouterProvider){
     url: '/eraseunavezalguienfamoso',
     templateUrl: '/js/views/famosos/los_famosos.html',
     resolve: {needAuthentication},
-    controller: 'famososCtrl as famosos'
+    controller: 'famososCtrl',
+    controllerAs: 'famosos'
   });
   // .state('profile', {
   //   url: '/profile',
