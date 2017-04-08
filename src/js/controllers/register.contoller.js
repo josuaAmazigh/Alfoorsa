@@ -27,15 +27,15 @@ function RegisterCtrl($state, $http, API, Multilingual, URL, CustomMethods){
         if(response.data.success){
           console.log('tas registrado');
           vm.user.token = response.data.token;
-          let url = `${URL}/activation/${response.data.token}`;
+          const url = `${URL}/activation/${response.data.token}`;
           Multilingual.translate('REGISTER_FORM.EMAIL_ACTIVACTION_MESSAGE',{name: vm.user.name, url_activation: url}  ,(id) => {
             vm.user.message = id;
             postMail(vm.user);
           });
           vm.errorMessage = '';
         }
-      }, function errorCallback(response) {
-        Multilingual.translate(response.data.code, {}  ,(messageTranslated) => {
+      }, (err) => {
+        Multilingual.translate(err.data.code, {}  ,(messageTranslated) => {
           vm.errorMessage = messageTranslated;
           console.log(vm.errorMessage);
         });
@@ -43,7 +43,7 @@ function RegisterCtrl($state, $http, API, Multilingual, URL, CustomMethods){
   };
   vm.postData = {};
 
-  var postMail = function (contact) {
+  var postMail = (contact) => {
     // wrap all your input values in $scope.postData
     vm.postData = angular.copy(contact);
 
