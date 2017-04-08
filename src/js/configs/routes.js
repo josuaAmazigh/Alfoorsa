@@ -7,14 +7,7 @@ function Router($stateProvider, $locationProvider, $urlRouterProvider){
   $locationProvider.html5Mode(true);
 
   const needAuthentication = (User) => {
-    return (
-      User
-        .get()
-        .$promise
-        .then(data => {
-          self.currentUser = data.user;
-        })
-    );
+    return (User.get().$promise);
   };
 
   $stateProvider
