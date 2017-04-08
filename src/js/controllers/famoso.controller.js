@@ -17,8 +17,17 @@ function famososCtrl(CurrentUserService, $state, Multilingual, Users){
     .then(data => {
       console.log(data);
       vm.listUsers = data.users;
+      countReviews(data.users.needreview);
     }, function errcalback(error){
       console.log(error);
     });
+  };
+
+  vm.countReviews = (reviews) => {
+    let array_reviews = [];
+    array_reviews.push(reviews);
+    if(array_reviews.indexOf(false) !== -1){
+      return array_reviews.length;
+    }
   };
 }
