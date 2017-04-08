@@ -1,0 +1,26 @@
+@font-face {
+    font-family: logoFont;
+    src: url(../fonts/ARJULIAN.ttf);
+    font-weight: bold;
+}
+
+#brand{
+  font-family: logoFont;
+  font-size: 3em;
+  color: #4b0a3e;
+  padding: 0px;
+  margin: 0px;
+}
+
+#brand span#FA{
+  font-size: 1.6em;
+  position: relative;
+  padding-bottom: 0px;
+  padding-top: 0px;
+  line-height: 1px;
+  top: 11px;
+}
+
+.icon_dropdown{
+  padding-right: 18px;
+}
