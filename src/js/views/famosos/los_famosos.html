@@ -1,32 +1,49 @@
+<div class="row nopadding">
+  <div class="col-sm-2 pull-sm-{{main.rootScope.default_float}} nopadding">
+    <ul class="list-group">
+      <li class="list-group-item h4" ng-click="famosos.getUsers()">
+        <i class="fa fa-users icon_menu_{{main.rootScope.default_direction}}" aria-hidden="true"></i>{{'ADMIN_PANEL.USERS'  | translate }}
+        <span ng-show="famosos.countReviews.length !== 0" class="badge badge-pill badge-color {{main.rootScope.default_move}}">{{famosos.countReviews.length}}</span>
+      </li>
+      <li class="list-group-item h4">
+        <i class="fa fa-building icon_menu_{{main.rootScope.default_direction}}" aria-hidden="true"></i>{{'ADMIN_PANEL.BUSINESSES'  | translate }}
+        <span ng-show="famosos.countReviews.length !== 0" class="badge badge-pill badge-color {{main.rootScope.default_move}}"></span>
+      </li>
+      <li class="list-group-item h4">
+        <i class="fa fa-shopping-bag icon_menu_{{main.rootScope.default_direction}}" aria-hidden="true"></i>{{'ADMIN_PANEL.STORES'  | translate }}
+        <span ng-show="famosos.countReviews.length !== 0" class="badge badge-pill badge-color {{main.rootScope.default_move}}">1</span>
+      </li>
+    </ul>
+  </div>
 
-<div class="btn-group" role="group" aria-label="Basic example">
-  <button type="button" class="btn btn-secondary" ng-click="famosos.getUsers()"><span ng-show="famosos.countReviews.length !== 0" class="badge badge-color">{{famosos.countReviews.length}}</span>Users</button>
-  <button type="button" class="btn btn-secondary">Business</button>
-  <button type="button" class="btn btn-secondary">Stores</button>
+  <div class="col-sm-10 pull-sm-{{main.rootScope.default_float}} nopadding">
+    <table class="table table-bordered table-striped table-hover" dir="{{main.rootScope.default_direction}}" ng-show="famosos.listUsers">
+      <thead class="thead-inverse">
+        <tr>
+          <th class="text-{{main.rootScope.default_float}}">#</th>
+          <th class="text-{{main.rootScope.default_float}}">{{'ADMIN_PANEL.NAME'  | translate }}</th>
+          <th class="text-{{main.rootScope.default_float}}">{{'ADMIN_PANEL.LAST_NAME'  | translate }}</th>
+          <th class="text-{{main.rootScope.default_float}}">{{'ADMIN_PANEL.PHONE'  | translate }}</th>
+          <th class="text-{{main.rootScope.default_float}}">{{'ADMIN_PANEL.EMAIL'  | translate }}</th>
+          <th class="text-{{main.rootScope.default_float}}">{{'ADMIN_PANEL.INTERFACE_LANGUAGE'  | translate }}</th>
+          <th class="text-{{main.rootScope.default_float}}">{{'ADMIN_PANEL.TYPE'  | translate }}</th>
+          <th class="text-{{main.rootScope.default_float}}">{{'ADMIN_PANEL.ROLE'  | translate }}</th>
+          <th class="text-{{main.rootScope.default_float}}">{{'ADMIN_PANEL.NEED_REVIEW'  | translate }}</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr ng-repeat="user in famosos.listUsers track by $index">
+          <th scope="row">{{$index}}</th>
+          <td>{{user.name}}</td>
+          <td>{{user.lastname}}</td>
+          <td>{{user.tel}}</td>
+          <td>{{user.email}}</td>
+          <td>{{user.preferredLanguage}}</td>
+          <td>{{user.type}}</td>
+          <td>{{user.role}}</td>
+          <td>{{user.needreview}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
 </div>
-
-
-<table class="table table-bordered table-sm" ng-show="famosos.listUsers">
-  <thead>
-    <tr>
-      <th>#</th>
-      <th>First name</th>
-      <th>Last name</th>
-      <th>Phone</th>
-      <th>Email</th>
-      <th>Type</th>
-      <th>Need Review</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr ng-repeat="user in famosos.listUsers track by $index">
-      <th scope="row">{{$index}}</th>
-      <td>{{user.name}}</td>
-      <td>{{user.lastname}}</td>
-      <td>{{user.tel}}</td>
-      <td>{{user.email}}</td>
-      <td>{{user.type}}</td>
-      <td>{{user.needreview}}</td>
-    </tr>
-  </tbody>
-</table>

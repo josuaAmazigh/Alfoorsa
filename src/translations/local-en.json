@@ -48,10 +48,27 @@
   },
 
   "NAV_VAR": {
+    "SIGN_IN": "Log In",
+    "SIGN_UP": "Sign Up",
     "WELCOME": "Welcome",
     "PROFILE": "Profile",
     "LOG_OUT": "Log out",
+    "USERS": "Users",
     "OR": "or"
+  },
+
+  "ADMIN_PANEL":{
+    "NAME": "Name",
+    "LAST_NAME": "Last Name",
+    "PHONE": "Phone",
+    "EMAIL": "Email Address",
+    "INTERFACE_LANGUAGE": "Interace Language",
+    "TYPE": "Type",
+    "ROLE": "Role",
+    "NEED_REVIEW": "Need Review",
+    "USERS": "Users",
+    "BUSINESSES": "Businesses",
+    "STORES": "Stores"
   }
 
 }

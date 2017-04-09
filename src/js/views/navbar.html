@@ -13,14 +13,14 @@
         <div class="dropdown-menu" style="{{main.rootScope.opposite_float}}: 0; {{main.rootScope.default_float}}: auto;" aria-labelledby="navbarDropdownMenuLink">
           <a class="dropdown-item dropdown-item_{{main.rootScope.default_direction}}" ui-sref="profile"><i class="fa fa-user icon_dropdown_{{main.rootScope.default_direction}}" aria-hidden="true"></i>{{ 'NAV_VAR.PROFILE' | translate }}</a>
           <a class="dropdown-item dropdown-item_{{main.rootScope.default_direction}}" ng-click="main.logout()"><i class="fa fa-sign-out icon_dropdown_{{main.rootScope.default_direction}}" aria-hidden="true"></i>{{ 'NAV_VAR.LOG_OUT' | translate }}</a>
-          <a class="dropdown-item dropdown-item_{{main.rootScope.default_direction}}" ui-sref="erdamatuput"><i class="fa fa-sign-out icon_dropdown_{{main.rootScope.default_direction}}" aria-hidden="true"></i>Users</a>
+          <a class="dropdown-item dropdown-item_{{main.rootScope.default_direction}}" ui-sref="erdamatuput"><i class="fa fa-sign-out icon_dropdown_{{main.rootScope.default_direction}}" aria-hidden="true"></i>{{ 'NAV_VAR.USERS' | translate }}</a>
         </div>
       </li>
     </ul>
     <ul ng-show="!main.user" class="navbar-nav {{main.rootScope.default_move}}">
-      <a class="navbar-brand" ui-sref="session">{{ 'REGISTER_FORM.SIGN_IN' | translate }}</a>
+      <a class="navbar-brand" ui-sref="session">{{ 'NAV_VAR.SIGN_IN' | translate }}</a>
       <span class="navbar-brand">{{'NAV_VAR.OR' | translate}}</span>
-      <a class="navbar-brand" ui-sref="session">{{ 'REGISTER_FORM.SIGN_UP' | translate }}</a>
+      <a class="navbar-brand" ui-sref="session">{{ 'NAV_VAR.SIGN_UP' | translate }}</a>
     </ul>
   </div>
 </nav>

@@ -17,8 +17,8 @@
     "PASSWORD_CONFIRMATION": "تأكيد إدخال الرمز",
     "EMAIL_ACTIVACTION_MESSAGE":"<p>Dear <strong>{{name}}</strong><p><p> Please activate your Alfoorsa account to become an active member.</p><p style='font-color: blue; text-decoration: none;'><a href='{{url_activation}}'>Click here to confirm your registration</a> and get started today!<br><br><p style='font-color: blue; text-decoration: none'><a href='{{url_activation}}'>Activate your accoun today!</a></p><br><p>Thank you,</p><p><strong>The Alfoorsa Team</strong></p>",
     "VALID_EMAIL": "Enter a valid Email",
-    "SIGN_IN": "Sign in",
-    "SIGN_UP": "Sign up",
+    "SIGN_IN": "تسجيل الدخول",
+    "SIGN_UP": "التسجيل",
     "VALID_LAST_NAME": "Enter a valid Last Name",
     "VALID_NAME": "Enter a valid Name",
     "NAME": "الاسم الشخصي",
@@ -44,14 +44,31 @@
 
   "LOGIN_FORM": {
     "LOGIN": "الدخول",
-    "FORGOT_PASSWORD": "هل نسيت كلمة المرور؟"
+    "FORGOT_PASSWORD": "هل نسيت الحساب؟"
   },
 
   "NAV_VAR": {
+    "SIGN_IN": "تسجيل الدخول",
+    "SIGN_UP": "التسجيل",
     "WELCOME": "مرحبا",
     "PROFILE": "الصفحة الشخصية",
     "LOG_OUT": "تسجيل الخروج",
+    "USERS": "Usuarios",
     "OR": "أو"
+  },
+
+  "ADMIN_PANEL":{
+    "NAME": "الاسم الشخصي",
+    "LAST_NAME": "الاسم العائلي",
+    "PHONE": "رقم الهاتف",
+    "EMAIL": "البريد الالكتروني",
+    "INTERFACE_LANGUAGE": "Idioma favorito",
+    "TYPE": "Tipo",
+    "ROLE": "Rol",
+    "NEED_REVIEW": "Necesita Revisión",
+    "USERS": "Usuarios",
+    "BUSINESSES": "Negocios",
+    "STORES": "Tiendas"
   }
 
 }
