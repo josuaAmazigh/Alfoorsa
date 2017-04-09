@@ -3,15 +3,15 @@
     <ul class="list-group">
       <li role="button" class="list-group-item list-group-item-action h4" ng-click="famosos.getUsers()">
         <i class="fa fa-users icon_menu_{{default_direction}}" aria-hidden="true"></i>{{'ADMIN_PANEL.USERS'  | translate }}
-        <span ng-show="famosos.countReviews.length !== 0" class="badge badge-pill badge-color {{default_move}}">{{famosos.countReviews.length}}</span>
+        <span ng-show="famosos.countReviews.length !== 0" class="badge badge-pill badge-color badge-position {{default_move}}">{{famosos.countReviews.length}}</span>
       </li>
       <li role="button" class="list-group-item list-group-item-action h4">
         <i class="fa fa-building icon_menu_{{default_direction}}" aria-hidden="true"></i>{{'ADMIN_PANEL.BUSINESSES'  | translate }}
-        <span ng-show="famosos.countReviews.length !== 0" class="badge badge-pill badge-color {{default_move}}"></span>
+        <span ng-show="famosos.countReviews.length !== 0" class="badge badge-pill badge-color badge-position {{default_move}}"></span>
       </li>
       <li role="button" class="list-group-item list-group-item-action h4">
         <i class="fa fa-shopping-bag icon_menu_{{default_direction}}" aria-hidden="true"></i>{{'ADMIN_PANEL.STORES'  | translate }}
-        <span ng-show="famosos.countReviews.length !== 0" class="badge badge-pill badge-color {{default_move}}">1</span>
+        <span ng-show="famosos.countReviews.length !== 0" class="badge badge-pill badge-color badge-position {{default_move}}"></span>
       </li>
     </ul>
   </div>

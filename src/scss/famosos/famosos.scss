@@ -4,12 +4,18 @@
 }
 
 .icon_menu_rtl{
-  padding-right: 18px;
-  padding-left:10px;
+  padding-right: 0px;
+  padding-left:  10px;
 }
 
 .icon_menu_ltr{
-  padding-left: 18px;
+  padding-left: 0px;
   padding-right:10px;
-  width: 60px;
+  width: 40px;
+}
+
+.badge-position{
+  position: relative;
+  top: -25px;
+  right: -35px;
 }
