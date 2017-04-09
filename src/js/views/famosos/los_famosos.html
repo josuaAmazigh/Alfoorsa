@@ -1,17 +1,17 @@
 <div class="row nopadding">
   <div class="col-sm-2 pull-sm-{{default_float}} nopadding">
-    <ul class="list-group">
+    <ul class="list-group nopadding">
       <li role="button" class="list-group-item list-group-item-action h4" ng-click="famosos.getUsers()">
         <i class="fa fa-users icon_menu_{{default_direction}}" aria-hidden="true"></i>{{'ADMIN_PANEL.USERS'  | translate }}
-        <span ng-show="famosos.countReviews.length !== 0" class="badge badge-pill badge-color badge-position {{default_move}}">{{famosos.countReviews.length}}</span>
+        <span ng-show="famosos.countReviews.length !== 0" class="badge badge-pill badge-color badge-position-{{default_direction}} {{default_move}}">{{famosos.countReviews.length}}</span>
       </li>
       <li role="button" class="list-group-item list-group-item-action h4">
         <i class="fa fa-building icon_menu_{{default_direction}}" aria-hidden="true"></i>{{'ADMIN_PANEL.BUSINESSES'  | translate }}
-        <span ng-show="famosos.countReviews.length !== 0" class="badge badge-pill badge-color badge-position {{default_move}}"></span>
+        <span ng-show="famosos.countReviews.length !== 0" class="badge badge-pill badge-color badge-position-{{default_direction}} {{default_move}}"></span>
       </li>
       <li role="button" class="list-group-item list-group-item-action h4">
         <i class="fa fa-shopping-bag icon_menu_{{default_direction}}" aria-hidden="true"></i>{{'ADMIN_PANEL.STORES'  | translate }}
-        <span ng-show="famosos.countReviews.length !== 0" class="badge badge-pill badge-color badge-position {{default_move}}"></span>
+        <span ng-show="famosos.countReviews.length !== 0" class="badge badge-pill badge-color badge-position-{{default_direction}} {{default_move}}"></span>
       </li>
     </ul>
   </div>
