@@ -3,55 +3,55 @@
   "BUTTON_LANG_ES": "Español",
   "BUTTON_LANG_AR": "العربية",
 
-  "EMAIL": "Email Address",
+  "EMAIL": "البريد الالكتروني",
   "EMAIL_IE": "name@example.com",
-  "PHONE": "Phone",
-  "PASSWORD": "Password",
-  "VALID_PHONE": "Enter a valid Phone Number",
+  "PHONE": "رقم الهاتف",
+  "PASSWORD": "الرمز السّري",
+  "VALID_PHONE": "الرجاء إدخال رقم هاتف صالح",
 
   "REGISTER_FORM": {
-    "REGISTER": "Register",
+    "REGISTER": "التسجيل",
     "PASSWORD_MIN_LENGTH": "Minimun lenght is 6 characters",
     "PASSWORD_MAX_LENGTH": "Maximun lenght is 20 characters",
     "VALID_PASSWORD_CONFIRMATION": "The Password doesn't match",
-    "PASSWORD_CONFIRMATION": "Password Confirmation",
+    "PASSWORD_CONFIRMATION": "تأكيد إدخال الرمز",
     "EMAIL_ACTIVACTION_MESSAGE":"<p>Dear <strong>{{name}}</strong><p><p> Please activate your Alfoorsa account to become an active member.</p><p style='font-color: blue; text-decoration: none;'><a href='{{url_activation}}'>Click here to confirm your registration</a> and get started today!<br><br><p style='font-color: blue; text-decoration: none'><a href='{{url_activation}}'>Activate your accoun today!</a></p><br><p>Thank you,</p><p><strong>The Alfoorsa Team</strong></p>",
     "VALID_EMAIL": "Enter a valid Email",
     "SIGN_IN": "Sign in",
     "SIGN_UP": "Sign up",
     "VALID_LAST_NAME": "Enter a valid Last Name",
     "VALID_NAME": "Enter a valid Name",
-    "NAME": "Name",
-    "LAST_NAME": "Last Name"
+    "NAME": "الاسم الشخصي",
+    "LAST_NAME": "الاسم العائلي"
   },
 
   "ERROR_CODES": {
-    "AC6001":	"Something went wrong.",
-    "AC6002":	"Access denied",
-    "AC6003":	"No user was found!",
-    "AC6004":	"You cant delete yourself",
-    "AC6005":	"No store was found!",
-    "AC6006":	"No business was found!",
-    "AC6007":	"Email not verified yet.",
-    "AC6008":	"Unauthorized",
-    "AC6009":	"A password is required",
-    "AC6010":	"Min lenght 6 characters",
-    "AC6011":	"The password confirmation does not match",
-    "AC6012":	"The email is not valid",
-    "AC6013":	"An user with this email already exist",
+    "AC6001": "Something went wrong.",
+    "AC6002": "Access denied",
+    "AC6003": "No user was found!",
+    "AC6004": "You cant delete yourself",
+    "AC6005": "No store was found!",
+    "AC6006": "No business was found!",
+    "AC6007": "Email not verified yet.",
+    "AC6008": "Unauthorized",
+    "AC6009": "A password is required",
+    "AC6010": "Min lenght 6 characters",
+    "AC6011": "The password confirmation does not match",
+    "AC6012": "The email is not valid",
+    "AC6013": "An user with this email already exist",
     "AC6014": "Your email or password is not correct"
   },
 
   "LOGIN_FORM": {
-    "LOGIN": "Login",
-    "FORGOT_PASSWORD": "Forgot your password?"
+    "LOGIN": "الدخول",
+    "FORGOT_PASSWORD": "هل نسيت كلمة المرور؟"
   },
 
   "NAV_VAR": {
-    "WELCOME": "Welcome",
-    "PROFILE": "Profile",
-    "LOG_OUT": "Log out",
-    "OR": "or"
+    "WELCOME": "مرحبا",
+    "PROFILE": "الصفحة الشخصية",
+    "LOG_OUT": "تسجيل الخروج",
+    "OR": "أو"
   }
 
 }

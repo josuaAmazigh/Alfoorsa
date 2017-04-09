@@ -15,18 +15,17 @@ function Multilingual($rootScope, $translate) {
     $translate(ID, params).then(callback);
   };
 
-
   $rootScope.$on('$translateChangeSuccess', function(event, data) {
-
-    var language = data.language;
-
-    $rootScope.lang = language;
-
-    $rootScope.default_direction = language === 'ar' ? 'rtl' : 'ltr';
-    $rootScope.opposite_direction = language === 'ar' ? 'ltr' : 'rtl';
-
-    $rootScope.default_float = language === 'ar' ? 'right' : 'left';
-    $rootScope.opposite_float = language === 'ar' ? 'left' : 'right';
-
+    vm.changeUIDirection(data.language);
   });
+
+  vm.changeUIDirection = (language) =>{
+    $rootScope.lang               = language;
+    $rootScope.default_direction  = language === 'ar' ? 'rtl' : 'ltr';
+    $rootScope.opposite_direction = language === 'ar' ? 'ltr' : 'rtl';
+    $rootScope.default_float      = language === 'ar' ? 'right' : 'left';
+    $rootScope.opposite_float     = language === 'ar' ? 'left' : 'right';
+    $rootScope.default_move       = language === 'ar' ? 'mr-auto' : 'ml-auto';
+    $rootScope.opposite_move      = language === 'ar' ? 'ml-auto' : 'mr-auto';
+  };
 }

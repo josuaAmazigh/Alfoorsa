@@ -2,6 +2,7 @@
   <div class="login-body" ng-controller="RegisterCtrl as register">
     <button ng-click="register.Multilingual.changeLanguage('es')" translate="BUTTON_LANG_ES"></button>
     <button ng-click="register.Multilingual.changeLanguage('en')" translate="BUTTON_LANG_EN"></button>
+    <button ng-click="register.Multilingual.changeLanguage('ar')" translate="BUTTON_LANG_AR"></button>
     <form class="new_new_user gl-show-field-errors" name="registerform"  method="post" ng-submit="register.registeros()" novalidate>
       <div class="form-group">
         <label for="name">{{ 'REGISTER_FORM.NAME' | translate }}</label>

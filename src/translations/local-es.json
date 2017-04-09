@@ -1,6 +1,8 @@
 {
-  "BUTTON_LANG_EN": "Inglés",
+  "BUTTON_LANG_EN": "English",
   "BUTTON_LANG_ES": "Español",
+  "BUTTON_LANG_AR": "العربية",
+  
   "EMAIL": "Email",
   "NAME": "Nombre",
   "LAST_NAME": "Apellidos",
