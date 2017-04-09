@@ -3,6 +3,9 @@
     <span class="navbar-toggler-icon"></span>
   </button>
   <a class="navbar-brand img-fluid" id="brand" href="/"><img src="/images/AlfoorsaTexto.png" class="img-fluid"></a>
+  <button ng-click="main.Multilingual.changeLanguage('es')" translate="BUTTON_LANG_ES"></button>
+  <button ng-click="main.Multilingual.changeLanguage('en')" translate="BUTTON_LANG_EN"></button>
+  <button ng-click="main.Multilingual.changeLanguage('ar')" translate="BUTTON_LANG_AR"></button>
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul ng-show="main.user" class="navbar-nav {{main.rootScope.default_move}}">
       <a class="navbar-brand img-fluid" ui-sref="profile">{{ 'NAV_VAR.WELCOME' | translate }} {{main.user.name}}</a>
