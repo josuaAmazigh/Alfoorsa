@@ -1,12 +1,74 @@
 {
-  "BUTTON_LANG_EN": "Inglés",
+  "BUTTON_LANG_EN": "English",
   "BUTTON_LANG_ES": "Español",
-  "EMAIL": "Email",
-  "NAME": "Nombre",
-  "LAST_NAME": "Apellidos",
-  "PHONE": "Telefono",
+  "BUTTON_LANG_AR": "العربية",
+
+  "EMAIL": "Dirección de Correo",
+  "EMAIL_IE": "nombre@ejemplo.com",
+  "PHONE": "Teléfono",
   "PASSWORD": "Contraseña",
-  "PASSWORD_CONFIRMATION": "Confirmacion de contraseña",
-  "VALID_NAME": "Escriba un nombre válido",
-  "VALID_PHONE": "El numero de telefono es invalido"
+  "VALID_PHONE": "Introduzca un número de telefono válido",
+
+  "REGISTER_FORM": {
+    "REGISTER": "Registro",
+    "PASSWORD_MIN_LENGTH": "Mínimo 6 caracteres",
+    "PASSWORD_MAX_LENGTH": "Máximo 20 caracteres",
+    "VALID_PASSWORD_CONFIRMATION": "Las contraseñas no coinciden",
+    "PASSWORD_CONFIRMATION": "Confirmar Contraseña",
+    "EMAIL_ACTIVACTION_MESSAGE":"<p>Dear <strong>{{name}}</strong><p><p> Please activate your Alfoorsa account to become an active member.</p><p style='font-color: blue; text-decoration: none;'><a href='{{url_activation}}'>Click here to confirm your registration</a> and get started today!<br><br><p style='font-color: blue; text-decoration: none'><a href='{{url_activation}}'>Activate your accoun today!</a></p><br><p>Thank you,</p><p><strong>The Alfoorsa Team</strong></p>",
+    "VALID_EMAIL": "Introduzca un correo válido",
+    "SIGN_IN": "Conectarse",
+    "SIGN_UP": "Registrarse",
+    "VALID_LAST_NAME": "Apellido no válido",
+    "VALID_NAME": "Nombre no válido",
+    "NAME": "Nombre",
+    "LAST_NAME": "Apellido"
+  },
+
+  "ERROR_CODES": {
+    "AC6001":	"Error inesperado.",
+    "AC6002":	"Acceso denegado",
+    "AC6003":	"Usuario no encontrado",
+    "AC6004":	"No puedes borrarte a ti mismo",
+    "AC6005":	"Tienda no encontrada",
+    "AC6006":	"Negocio no encontrado",
+    "AC6007":	"Aún no ha verificado su dirección de correo",
+    "AC6008":	"No autorizado",
+    "AC6009":	"Debe introducir una contraseña",
+    "AC6010":	"Mínimo 6 caracteres",
+    "AC6011":	"Las contraseñas no coinciden",
+    "AC6012":	"Correo no válido",
+    "AC6013":	"Ese correo ya está registrado",
+    "AC6014": "El correo o la contraseña no son validos"
+  },
+
+  "LOGIN_FORM": {
+    "LOGIN": "Iniciar Sesión",
+    "FORGOT_PASSWORD": "¿No recuerdas tu contraseña?"
+  },
+
+  "NAV_VAR": {
+    "SIGN_IN": "Entrar",
+    "SIGN_UP": "Registrar",
+    "WELCOME": "Bienvenido",
+    "PROFILE": "Perfil",
+    "LOG_OUT": "Cerrar Sesión",
+    "USERS": "Usuarios",
+    "OR": "|"
+  },
+
+  "ADMIN_PANEL":{
+    "NAME": "Nombre",
+    "LAST_NAME": "Apellido",
+    "PHONE": "Teléfono",
+    "EMAIL": "Dirección de Correo",
+    "INTERFACE_LANGUAGE": "Idioma favorito",
+    "TYPE": "Tipo",
+    "ROLE": "Rol",
+    "NEED_REVIEW": "Necesita Revisión",
+    "USERS": "Usuarios",
+    "BUSINESSES": "Negocios",
+    "STORES": "Tiendas"
+  }
+
 }

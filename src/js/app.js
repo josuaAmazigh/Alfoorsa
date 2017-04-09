@@ -6,16 +6,6 @@ angular
     'pascalprecht.translate',
     'ngCookies'
   ])
-  .run(['$rootScope', function($rootScope) {
-    $rootScope.lang = 'en';
-
-    $rootScope.default_float = 'left';
-    $rootScope.opposite_float = 'right';
-
-    $rootScope.default_direction = 'ltr';
-    $rootScope.opposite_direction = 'rtl';
-    }])
-
   .config(['$translateProvider', function($translateProvider) {
     $translateProvider
     .useStaticFilesLoader({
@@ -42,5 +32,10 @@ angular
       }
       return 'en'; // default language english
     })
-    .useSanitizeValueStrategy(null);
+    .useLocalStorage()
+    .useSanitizeValueStrategy('escapeParameters');
+  }])
+  .run(['Multilingual', '$translate', (Multilingual, $translate) => {
+    const language  = $translate.storage().get($translate.storageKey());
+    Multilingual.changeUIDirection(language);
   }]);

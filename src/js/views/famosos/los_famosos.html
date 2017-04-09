@@ -1,32 +1,81 @@
+<div class="row nopadding">
+  <div class="col-sm-2 pull-sm-{{default_float}} nopadding">
+    <ul class="list-group">
+      <li role="button" class="list-group-item list-group-item-action h4" ng-click="famosos.getUsers()">
+        <i class="fa fa-users icon_menu_{{default_direction}}" aria-hidden="true"></i>{{'ADMIN_PANEL.USERS'  | translate }}
+        <span ng-show="famosos.countReviews.length !== 0" class="badge badge-pill badge-color {{default_move}}">{{famosos.countReviews.length}}</span>
+      </li>
+      <li role="button" class="list-group-item list-group-item-action h4">
+        <i class="fa fa-building icon_menu_{{default_direction}}" aria-hidden="true"></i>{{'ADMIN_PANEL.BUSINESSES'  | translate }}
+        <span ng-show="famosos.countReviews.length !== 0" class="badge badge-pill badge-color {{default_move}}"></span>
+      </li>
+      <li role="button" class="list-group-item list-group-item-action h4">
+        <i class="fa fa-shopping-bag icon_menu_{{default_direction}}" aria-hidden="true"></i>{{'ADMIN_PANEL.STORES'  | translate }}
+        <span ng-show="famosos.countReviews.length !== 0" class="badge badge-pill badge-color {{default_move}}">1</span>
+      </li>
+    </ul>
+  </div>
 
-<div class="btn-group" role="group" aria-label="Basic example">
-  <button type="button" class="btn btn-secondary" ng-click="famosos.getUsers()"><span ng-show="famosos.countReviews.length !== 0" class="badge badge-color">{{famosos.countReviews.length}}</span>Users</button>
-  <button type="button" class="btn btn-secondary">Business</button>
-  <button type="button" class="btn btn-secondary">Stores</button>
+  <div class="col-sm-10 pull-sm-{{default_float}} nopadding">
+    <table class="table table-bordered table-striped table-hover" dir="{{default_direction}}" ng-show="famosos.listUsers">
+      <thead class="thead-inverse">
+        <tr>
+          <th class="text-{{default_float}}">#</th>
+          <th role="button" ng-click="sortType = 'name'; sortReverse = !sortReverse" class="text-{{default_float}}">
+            {{'ADMIN_PANEL.NAME'  | translate }}
+            <span ng-show="sortType == 'name'" class="fa" ng-class="sortReverse ? 'fa-caret-up' : 'fa-caret-down'"></span>
+            <span ng-show="sortType != 'name'" class="fa fa-sort"></span>
+          </th>
+          <th role="button" ng-click="sortType = 'lastname'; sortReverse = !sortReverse" class="text-{{default_float}}">
+            {{'ADMIN_PANEL.LAST_NAME'  | translate }}
+            <span ng-show="sortType == 'lastname'" class="fa" ng-class="sortReverse ? 'fa-caret-up' : 'fa-caret-down'"></span>
+            <span ng-show="sortType != 'lastname'" class="fa fa-sort"></span>
+          </th>
+          <th role="button" ng-click="sortType = 'tel'; sortReverse = !sortReverse" class="text-{{default_float}}">
+            {{'ADMIN_PANEL.PHONE'  | translate }}
+            <span ng-show="sortType == 'tel'" class="fa" ng-class="sortReverse ? 'fa-caret-up' : 'fa-caret-down'"></span>
+            <span ng-show="sortType != 'tel'" class="fa fa-sort"></span>
+          </th>
+          <th role="button" ng-click="sortType = 'email'; sortReverse = !sortReverse" class="text-{{default_float}}">
+            {{'ADMIN_PANEL.EMAIL'  | translate }}
+            <span ng-show="sortType == 'email'" class="fa" ng-class="sortReverse ? 'fa-caret-up' : 'fa-caret-down'"></span>
+            <span ng-show="sortType != 'email'" class="fa fa-sort"></span>
+          </th>
+          <th role="button" ng-click="sortType = 'preferredLanguage'; sortReverse = !sortReverse" class="text-{{default_float}}">
+            {{'ADMIN_PANEL.INTERFACE_LANGUAGE'  | translate }}
+            <span ng-show="sortType == 'preferredLanguage'" class="fa" ng-class="sortReverse ? 'fa-caret-up' : 'fa-caret-down'"></span>
+            <span ng-show="sortType != 'preferredLanguage'" class="fa fa-sort"></span>
+          </th>
+          <th role="button" ng-click="sortType = 'type'; sortReverse = !sortReverse" class="text-{{default_float}}">
+            {{'ADMIN_PANEL.TYPE'  | translate }}
+            <span ng-show="sortType == 'type'" class="fa" ng-class="sortReverse ? 'fa-caret-up' : 'fa-caret-down'"></span>
+            <span ng-show="sortType != 'type'" class="fa fa-sort"></span>
+          </th>
+          <th role="button" ng-click="sortType = 'role'; sortReverse = !sortReverse" class="text-{{default_float}}">
+            {{'ADMIN_PANEL.ROLE'  | translate }}
+            <span ng-show="sortType == 'role'" class="fa" ng-class="sortReverse ? 'fa-caret-up' : 'fa-caret-down'"></span>
+            <span ng-show="sortType != 'role'" class="fa fa-sort"></span>
+          </th>
+          <th role="button" ng-click="sortType = 'needreview'; sortReverse = !sortReverse" class="text-{{default_float}}">
+            {{'ADMIN_PANEL.NEED_REVIEW'  | translate }}
+            <span ng-show="sortType == 'needreview'" class="fa" ng-class="sortReverse ? 'fa-caret-up' : 'fa-caret-down'"></span>
+            <span ng-show="sortType != 'needreview'" class="fa fa-sort"></span>
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr ng-repeat="user in famosos.listUsers | orderBy:sortType:sortReverse">
+          <th scope="row"></th>
+          <td>{{user.name}}</td>
+          <td>{{user.lastname}}</td>
+          <td>{{user.tel}}</td>
+          <td>{{user.email}}</td>
+          <td>{{user.preferredLanguage}}</td>
+          <td>{{user.type}}</td>
+          <td>{{user.role}}</td>
+          <td>{{user.needreview}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
 </div>
-
-
-<table class="table table-bordered table-sm" ng-show="famosos.listUsers">
-  <thead>
-    <tr>
-      <th>#</th>
-      <th>First name</th>
-      <th>Last name</th>
-      <th>Phone</th>
-      <th>Email</th>
-      <th>Type</th>
-      <th>Need Review</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr ng-repeat="user in famosos.listUsers track by $index">
-      <th scope="row">{{$index}}</th>
-      <td>{{user.name}}</td>
-      <td>{{user.lastname}}</td>
-      <td>{{user.tel}}</td>
-      <td>{{user.email}}</td>
-      <td>{{user.type}}</td>
-      <td>{{user.needreview}}</td>
-    </tr>
-  </tbody>
-</table>

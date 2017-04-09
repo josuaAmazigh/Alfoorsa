@@ -4,23 +4,20 @@
     font-weight: bold;
 }
 
-#brand{
-  font-family: logoFont;
-  font-size: 3em;
-  color: #4b0a3e;
-  padding: 0px;
-  margin: 0px;
-}
-
-#brand span#FA{
-  font-size: 1.6em;
-  position: relative;
-  padding-bottom: 0px;
-  padding-top: 0px;
-  line-height: 1px;
-  top: 11px;
-}
-
-.icon_dropdown{
+.icon_dropdown_ltr{
   padding-right: 18px;
+  padding-left: 10px;
+}
+
+.icon_dropdown_rtl{
+  padding-left: 18px;
+  padding-right:10px;
+}
+
+.dropdown-item_ltr{
+  text-align: left;
+}
+
+.dropdown-item_rtl{
+  text-align: right;
 }

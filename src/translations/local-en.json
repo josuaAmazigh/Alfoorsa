@@ -1,6 +1,7 @@
 {
   "BUTTON_LANG_EN": "English",
-  "BUTTON_LANG_ES": "Spanish",
+  "BUTTON_LANG_ES": "Español",
+  "BUTTON_LANG_AR": "العربية",
 
   "EMAIL": "Email Address",
   "EMAIL_IE": "name@example.com",
@@ -9,6 +10,7 @@
   "VALID_PHONE": "Enter a valid Phone Number",
 
   "REGISTER_FORM": {
+    "REGISTER": "Register",
     "PASSWORD_MIN_LENGTH": "Minimun lenght is 6 characters",
     "PASSWORD_MAX_LENGTH": "Maximun lenght is 20 characters",
     "VALID_PASSWORD_CONFIRMATION": "The Password doesn't match",
@@ -46,10 +48,27 @@
   },
 
   "NAV_VAR": {
+    "SIGN_IN": "Log In",
+    "SIGN_UP": "Sign Up",
     "WELCOME": "Welcome",
     "PROFILE": "Profile",
     "LOG_OUT": "Log out",
+    "USERS": "Users",
     "OR": "or"
+  },
+
+  "ADMIN_PANEL":{
+    "NAME": "Name",
+    "LAST_NAME": "Last Name",
+    "PHONE": "Phone",
+    "EMAIL": "Email Address",
+    "INTERFACE_LANGUAGE": "Interace Language",
+    "TYPE": "Type",
+    "ROLE": "Role",
+    "NEED_REVIEW": "Need Review",
+    "USERS": "Users",
+    "BUSINESSES": "Businesses",
+    "STORES": "Stores"
   }
 
 }

@@ -1,26 +1,30 @@
 <nav class="navbar navbar-toggleable-md navbar-light bg-faded">
-  <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+  <button class="navbar-toggler navbar-toggler-{{opposite_float}}" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
-  <a class="navbar-brand img-fluid" id="brand" href="/">AL<span id="FA">فُ</span>RSA</a>
+  <a class="navbar-brand img-fluid" id="brand" href="/"><img src="/images/AlfoorsaTexto.png" class="img-fluid"></a>
+  <button ng-click="main.Multilingual.changeLanguage('es')" translate="BUTTON_LANG_ES"></button>
+  <button ng-click="main.Multilingual.changeLanguage('en')" translate="BUTTON_LANG_EN"></button>
+  <button ng-click="main.Multilingual.changeLanguage('ar')" translate="BUTTON_LANG_AR"></button>
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul ng-show="main.user" class="navbar-nav ml-auto">
+    <ul ng-show="main.user" class="navbar-nav {{default_move}}">
       <a class="navbar-brand img-fluid" ui-sref="profile">{{ 'NAV_VAR.WELCOME' | translate }} {{main.user.name}}</a>
       <li class="nav-item">
         <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           <i class="fa fa-user fa-2x" aria-hidden="true"></i>
         </a>
-        <div class="dropdown-menu" style="right: 0; left: auto;" aria-labelledby="navbarDropdownMenuLink">
-          <a class="dropdown-item" ui-sref="profile"><i class="fa fa-user icon_dropdown" aria-hidden="true"></i>{{ 'NAV_VAR.PROFILE' | translate }}</a>
-          <a class="dropdown-item" ng-click="main.logout()"><i class="fa fa-sign-out icon_dropdown" aria-hidden="true"></i>{{ 'NAV_VAR.LOG_OUT' | translate }}</a>
-          <a class="dropdown-item" ui-sref="erdamatuput"><i class="fa fa-sign-out icon_dropdown" aria-hidden="true"></i>Users</a>
+        <div class="dropdown-menu" style="{{opposite_float}}: 0; {{default_float}}: auto;" aria-labelledby="navbarDropdownMenuLink">
+          <a role="button" class="dropdown-item dropdown-item_{{default_direction}}" ui-sref="profile"><i class="fa fa-user icon_dropdown_{{default_direction}}" aria-hidden="true"></i>{{ 'NAV_VAR.PROFILE' | translate }}</a>
+          <a role="button" class="dropdown-item dropdown-item_{{default_direction}}" ng-click="main.logout()"><i class="fa fa-sign-out icon_dropdown_{{default_direction}}" aria-hidden="true"></i>{{ 'NAV_VAR.LOG_OUT' | translate }}</a>
+          <div class="dropdown-divider"></div>
+          <a role="button" class="dropdown-item dropdown-item_{{default_direction}}" ui-sref="erdamatuput"><i class="fa fa-cog icon_dropdown_{{default_direction}}" aria-hidden="true"></i>{{ 'NAV_VAR.USERS' | translate }}</a>
         </div>
       </li>
     </ul>
-    <ul ng-show="!main.user" class="navbar-nav ml-auto">
-      <a class="navbar-brand" ui-sref="session">{{ 'REGISTER_FORM.SIGN_IN' | translate }}</a>
+    <ul ng-show="!main.user" class="navbar-nav {{default_move}}">
+      <a class="navbar-brand" ui-sref="session">{{ 'NAV_VAR.SIGN_IN' | translate }}</a>
       <span class="navbar-brand">{{'NAV_VAR.OR' | translate}}</span>
-      <a class="navbar-brand" ui-sref="session">{{ 'REGISTER_FORM.SIGN_UP' | translate }}</a>
+      <a class="navbar-brand" ui-sref="session">{{ 'NAV_VAR.SIGN_UP' | translate }}</a>
     </ul>
   </div>
 </nav>

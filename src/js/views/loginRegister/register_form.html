@@ -1,7 +1,5 @@
 <div class="login-box tab-pane active" role="tabpanel">
   <div class="login-body" ng-controller="RegisterCtrl as register">
-    <button ng-click="register.Multilingual.changeLanguage('es')" translate="BUTTON_LANG_ES"></button>
-    <button ng-click="register.Multilingual.changeLanguage('en')" translate="BUTTON_LANG_EN"></button>
     <form class="new_new_user gl-show-field-errors" name="registerform"  method="post" ng-submit="register.registeros()" novalidate>
       <div class="form-group">
         <label for="name">{{ 'REGISTER_FORM.NAME' | translate }}</label>
@@ -35,7 +33,7 @@
       </div>
 
       <p ng-if="register.errorMessage !== ''" class="errorMessage">{{register.errorMessage}}</p>
-      <button type="submit" ng-disabled="registerform.$invalid" class="btn btn-register btn-block">{{ 'REGISTER_FORM.SIGN_IN' | translate}}</button>
+      <button type="submit" ng-disabled="registerform.$invalid" class="btn btn-register btn-block">{{ 'REGISTER_FORM.SIGN_UP' | translate}}</button>
     </form>
   </div>
   <div class="clearfix submit-container">
