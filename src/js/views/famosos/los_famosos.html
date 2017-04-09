@@ -1,15 +1,15 @@
 <div class="row nopadding">
   <div class="col-sm-2 pull-sm-{{main.rootScope.default_float}} nopadding">
     <ul class="list-group">
-      <li role="button" class="list-group-item h4" ng-click="famosos.getUsers()">
+      <li role="button" class="list-group-item list-group-item-action h4" ng-click="famosos.getUsers()">
         <i class="fa fa-users icon_menu_{{main.rootScope.default_direction}}" aria-hidden="true"></i>{{'ADMIN_PANEL.USERS'  | translate }}
         <span ng-show="famosos.countReviews.length !== 0" class="badge badge-pill badge-color {{main.rootScope.default_move}}">{{famosos.countReviews.length}}</span>
       </li>
-      <li role="button" class="list-group-item h4">
+      <li role="button" class="list-group-item list-group-item-action h4">
         <i class="fa fa-building icon_menu_{{main.rootScope.default_direction}}" aria-hidden="true"></i>{{'ADMIN_PANEL.BUSINESSES'  | translate }}
         <span ng-show="famosos.countReviews.length !== 0" class="badge badge-pill badge-color {{main.rootScope.default_move}}"></span>
       </li>
-      <li role="button" class="list-group-item h4">
+      <li role="button" class="list-group-item list-group-item-action h4">
         <i class="fa fa-shopping-bag icon_menu_{{main.rootScope.default_direction}}" aria-hidden="true"></i>{{'ADMIN_PANEL.STORES'  | translate }}
         <span ng-show="famosos.countReviews.length !== 0" class="badge badge-pill badge-color {{main.rootScope.default_move}}">1</span>
       </li>
