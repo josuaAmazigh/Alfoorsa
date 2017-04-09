@@ -2,13 +2,16 @@ angular
 .module('Alfoorsa')
 .controller('famososCtrl', famososCtrl);
 
-famososCtrl.$inject = ['CurrentUserService', '$state', 'Multilingual', 'Users'];
-function famososCtrl(CurrentUserService, $state, Multilingual, Users){
+famososCtrl.$inject = ['$rootScope','CurrentUserService', '$state', 'Multilingual', 'Users'];
+function famososCtrl($rootScope, CurrentUserService, $state, Multilingual, Users){
   const vm = this;
 
   if(CurrentUserService.currentUser.role !== 'ADMIN'){
     $state.go('home');
   }
+
+  $rootScope.sortType     = 'name'; // set the default sort type
+  $rootScope.sortReverse  = false;  // set the default sort order
 
   vm.getUsers = () => {
     Users
@@ -18,16 +21,16 @@ function famososCtrl(CurrentUserService, $state, Multilingual, Users){
       console.log(data);
       vm.listUsers = data.users;
       vm.countReviews(data.users.needreview);
-    }, function errcalback(error){
+    }, (error) => {
       console.log(error);
     });
   };
 
   vm.countReviews = (reviews) => {
-    let array_reviews = [];
-    array_reviews.push(reviews);
-    if(array_reviews.indexOf(false) !== -1){
-      return array_reviews.length;
+    const arrayReviews = [];
+    arrayReviews.push(reviews);
+    if(arrayReviews.indexOf(false) !== -1){
+      return arrayReviews.length;
     }
   };
 }
