@@ -1,4 +1,4 @@
-<html ng-app="Alfoorsa" ng-controller="MainCtrl as main" lang="{{main.rootScope.lang}}">
+<html ng-app="Alfoorsa" ng-controller="MainCtrl as main" lang="{{lang}}">
 <head>
   <meta charset="utf-8">
   <title>ALفُRSA</title>
@@ -12,7 +12,7 @@
   <base href="/">
 </head>
 
-<body id="bootstrap-overrides" dir="{{main.rootScope.default_direction}}">
+<body id="bootstrap-overrides" dir="{{default_direction}}">
   <navbar></navbar>
   <main ui-view ></main>
 </body>
