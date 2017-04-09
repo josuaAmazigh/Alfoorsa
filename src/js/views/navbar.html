@@ -14,9 +14,10 @@
           <i class="fa fa-user fa-2x" aria-hidden="true"></i>
         </a>
         <div class="dropdown-menu" style="{{main.rootScope.opposite_float}}: 0; {{main.rootScope.default_float}}: auto;" aria-labelledby="navbarDropdownMenuLink">
-          <a class="dropdown-item dropdown-item_{{main.rootScope.default_direction}}" ui-sref="profile"><i class="fa fa-user icon_dropdown_{{main.rootScope.default_direction}}" aria-hidden="true"></i>{{ 'NAV_VAR.PROFILE' | translate }}</a>
-          <a class="dropdown-item dropdown-item_{{main.rootScope.default_direction}}" ng-click="main.logout()"><i class="fa fa-sign-out icon_dropdown_{{main.rootScope.default_direction}}" aria-hidden="true"></i>{{ 'NAV_VAR.LOG_OUT' | translate }}</a>
-          <a class="dropdown-item dropdown-item_{{main.rootScope.default_direction}}" ui-sref="erdamatuput"><i class="fa fa-sign-out icon_dropdown_{{main.rootScope.default_direction}}" aria-hidden="true"></i>{{ 'NAV_VAR.USERS' | translate }}</a>
+          <a role="button" class="dropdown-item dropdown-item_{{main.rootScope.default_direction}}" ui-sref="profile"><i class="fa fa-user icon_dropdown_{{main.rootScope.default_direction}}" aria-hidden="true"></i>{{ 'NAV_VAR.PROFILE' | translate }}</a>
+          <a role="button" class="dropdown-item dropdown-item_{{main.rootScope.default_direction}}" ng-click="main.logout()"><i class="fa fa-sign-out icon_dropdown_{{main.rootScope.default_direction}}" aria-hidden="true"></i>{{ 'NAV_VAR.LOG_OUT' | translate }}</a>
+          <div class="dropdown-divider"></div>
+          <a role="button" class="dropdown-item dropdown-item_{{main.rootScope.default_direction}}" ui-sref="erdamatuput"><i class="fa fa-cog icon_dropdown_{{main.rootScope.default_direction}}" aria-hidden="true"></i>{{ 'NAV_VAR.USERS' | translate }}</a>
         </div>
       </li>
     </ul>
