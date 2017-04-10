@@ -13,7 +13,7 @@ function AuthInterceptor(API, TokenService) {
       return config;
     },
     response(res) {
-      if (res.config.url.indexOf(API) === 0 && res.data.token && res.config.url.indexOf(API+ '/register') === -1 ){
+      if (res.config.url.indexOf(API) === 0 && res.data.token && res.config.url.indexOf(`${API}/register`) === -1 ){
         TokenService.setToken(res.data.token);
       }
       return res;

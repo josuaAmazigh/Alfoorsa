@@ -32,7 +32,7 @@ angular
       }
       return 'en'; // default language english
     })
-    .useLocalStorage()
+    .useStorage('CustomStorage')
     .useSanitizeValueStrategy('escapeParameters');
   }])
   .run(['Multilingual', '$translate', (Multilingual, $translate) => {

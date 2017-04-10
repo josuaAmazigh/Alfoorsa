@@ -2,8 +2,8 @@ angular
   .module('Alfoorsa')
   .service('CurrentUserService', CurrentUserService);
 
-CurrentUserService.$inject = ['TokenService', '$rootScope', 'User'];
-function CurrentUserService(TokenService, $rootScope, User) {
+CurrentUserService.$inject = ['TokenService', '$rootScope', 'User', 'CustomStorage'];
+function CurrentUserService(TokenService, $rootScope, User, CustomStorage) {
   const self = this;
 
   self.getUser = () => {
@@ -14,6 +14,8 @@ function CurrentUserService(TokenService, $rootScope, User) {
         .$promise
         .then(data => {
           self.currentUser = data.user;
+          CustomStorage.put('',  data.user.preferredLanguage);
+          $rootScope.Multilingual.changeLanguage(data.user.preferredLanguage);
           $rootScope.$broadcast('loggedIn');
         });
     }else{
