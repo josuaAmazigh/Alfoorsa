@@ -45,7 +45,7 @@
     </tr>
   </thead>
   <tbody>
-    <tr ng-repeat="user in famosos.listUsers | orderBy:sortType:sortReverse">
+    <tr ng-repeat="user in famosos.listUsers | orderBy:sortType:sortReverse" role="button" ng-click="famosos.openUser(user.id)">
       <th scope="row"></th>
       <td>{{user.name}}</td>
       <td>{{user.lastname}}</td>
