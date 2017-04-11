@@ -3,15 +3,16 @@
   margin: 0px;
 }
 
+.icon_menu_ltr, .icon_menu_rtl{
+  width: 40px;
+}
 .icon_menu_rtl{
   padding-right: 0px;
   padding-left:  10px;
 }
-
 .icon_menu_ltr{
   padding-left: 0px;
   padding-right:10px;
-  width: 40px;
 }
 
 .badge-position-ltr, .badge-position-rtl{

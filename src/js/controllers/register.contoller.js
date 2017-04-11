@@ -25,7 +25,6 @@ function RegisterCtrl($state, $http, API, Multilingual, URL, CustomMethods){
       .post(`${API}/register`, { user: vm.user })
       .then((response) => {
         if(response.data.success){
-          console.log('tas registrado');
           vm.user.token = response.data.token;
           const url = `${URL}/activation/${response.data.token}`;
           Multilingual.translate('REGISTER_FORM.EMAIL_ACTIVACTION_MESSAGE',{name: vm.user.name, url_activation: url}  ,(id) => {
@@ -35,10 +34,8 @@ function RegisterCtrl($state, $http, API, Multilingual, URL, CustomMethods){
           vm.errorMessage = '';
         }
       }, (err) => {
-        Multilingual.translate(err.data.code, {}  ,(messageTranslated) => {
-          vm.errorMessage = messageTranslated;
-          console.log(vm.errorMessage);
-        });
+        vm.errorMessage = `ERROR_CODES.${err.data.code}`;
+        throw err;
       });
   };
   vm.postData = {};

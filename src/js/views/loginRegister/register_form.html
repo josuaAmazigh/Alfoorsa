@@ -32,14 +32,8 @@
         <p ng-show="register.passwordMatch(registerform)  && registerform.password_confirmation.$dirty" class="gl-field-error hide">{{ 'REGISTER_FORM.VALID_PASSWORD_CONFIRMATION' | translate }}</p>
       </div>
 
-      <p ng-if="register.errorMessage !== ''" class="errorMessage">{{register.errorMessage}}</p>
+      <p ng-if="register.errorMessage !== ''" class="errorMessage">{{register.errorMessage | translate}}</p>
       <button type="submit" ng-disabled="registerform.$invalid" class="btn btn-register btn-block">{{ 'REGISTER_FORM.SIGN_UP' | translate}}</button>
     </form>
-  </div>
-  <div class="clearfix submit-container">
-     <p>
-        <span class="light">Didn't receive a confirmation email?</span>
-        <a href="/users/confirmation/new">Request a new one</a>.
-     </p>
   </div>
 </div>

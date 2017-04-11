@@ -10,7 +10,7 @@
         <input class="form-control" id="password" ng-minlength="6" ng-maxlength="20" type="password" name="password" ng-model="login.user.password" required/>
       </div>
 
-      <p ng-if="login.errorMessage !== ''">{{login.errorMessage}}</p>
+      <p ng-if="login.errorMessage !== ''">{{login.errorMessage | translate}}</p>
       <div class="submit-container move-submit-down">
         <button type="submit" ng-disabled="loginForm.$invalid" class="btn btn-save btn-block">{{ 'LOGIN_FORM.LOGIN' | translate}}</button>
       </div>
@@ -20,6 +20,12 @@
       <div class="pull-right forgot-password">
          <a href="/users/password/new">{{'LOGIN_FORM.FORGOT_PASSWORD' | translate }}</a>
       </div>
+    </div>
+    <div class="clearfix submit-container">
+       <p>
+          <span class="light">Didn't receive a confirmation email?</span>
+          <a href="/users/confirmation/new">Request a new one</a>.
+       </p>
     </div>
   </div>
 </div>

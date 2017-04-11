@@ -54,7 +54,7 @@
     "PROFILE": "Profile",
     "LOG_OUT": "Log out",
     "USERS": "Users",
-    "OR": "or"
+    "OR": "|"
   },
 
   "ADMIN_PANEL":{

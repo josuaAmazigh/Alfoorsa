@@ -16,7 +16,7 @@ function profileCtrl(CurrentUserService, $state, Multilingual, User){
     .$promise
     .then(data => {
       console.log(data);
-    }, function errcalback(error){
+    }, (error) => {
       console.log(error);
     });
   };

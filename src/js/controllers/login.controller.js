@@ -21,10 +21,8 @@ function LoginCtrl($state, $http, API, Multilingual, URL, CustomMethods, TokenSe
           CurrentUserService.getUser();
           $state.go('home');
         }
-      }, function errorCallback(response) {
-        Multilingual.translate("ERROR_CODES."+response.data.code, {}  ,(messageTranslated) => {
-          vm.errorMessage = messageTranslated;
-        });
+      }, (err) => {
+        vm.errorMessage = `ERROR_CODES.${err.data.code}`;
       });
   };
 }
