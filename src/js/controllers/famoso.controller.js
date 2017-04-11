@@ -2,8 +2,8 @@ angular
 .module('Alfoorsa')
 .controller('famososCtrl', famososCtrl);
 
-famososCtrl.$inject = ['$rootScope','CurrentUserService', '$state', 'Multilingual', 'Users'];
-function famososCtrl($rootScope, CurrentUserService, $state, Multilingual, Users){
+famososCtrl.$inject = ['$rootScope','CurrentUserService', '$state', 'Multilingual', 'Users', '$window'];
+function famososCtrl($rootScope, CurrentUserService, $state, Multilingual, Users, $window){
   const vm = this;
 
   if(CurrentUserService.currentUser.role !== 'ADMIN'){
@@ -24,6 +24,10 @@ function famososCtrl($rootScope, CurrentUserService, $state, Multilingual, Users
     }, (error) => {
       console.log(error);
     });
+  };
+  vm.openUser = (userId) => {
+    const win = $state.href('cnt', { id: userId});
+    $window.open(win);
   };
 
   vm.countReviews = (reviews) => {

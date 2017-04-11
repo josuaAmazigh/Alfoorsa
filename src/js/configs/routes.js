@@ -37,6 +37,11 @@ function Router($stateProvider, $locationProvider, $urlRouterProvider){
     parent: 'erdamatuput',
     templateUrl: '/js/views/famosos/users-table.html'
   })
+  .state('cnt', {
+    url: '/cnt/:id',
+    templateUrl: '/js/views/famosos/admin-user-edit.html'
+  })
+
   .state('profile', {
     url: '/profile',
     templateUrl: '/js/views/users/profile/Profile.html',
