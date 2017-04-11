@@ -30,15 +30,18 @@ function Router($stateProvider, $locationProvider, $urlRouterProvider){
     url: '/eraseunavezalguienfamoso',
     templateUrl: '/js/views/famosos/los_famosos.html',
     resolve: {needAuthentication},
-    controller: 'famososCtrl',
-    controllerAs: 'famosos'
+    controller: 'famososCtrl as famosos'
+  })
+  .state('erdamatuput.users', {
+    url: '/contact',
+    parent: 'erdamatuput',
+    templateUrl: '/js/views/famosos/users-table.html'
   })
   .state('profile', {
     url: '/profile',
     templateUrl: '/js/views/users/user_profile.html',
     resolve: {needAuthentication},
-    controller: 'profileCtrl',
-    controllerAs: 'profile'
+    controller: 'profileCtrl as profile'
   });
   $urlRouterProvider.otherwise('/');
 }
