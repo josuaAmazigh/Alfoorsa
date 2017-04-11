@@ -46,7 +46,7 @@ function Router($stateProvider, $locationProvider, $urlRouterProvider){
   .state('profile.user', {
     url: '/user',
     parent: 'profile',
-    templateUrl: '/js/views/users/profile/user_profile.html',
+    templateUrl: '/js/views/users/profile/user_profile.html'
   });
   $urlRouterProvider.otherwise('/');
 }

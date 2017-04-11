@@ -20,4 +20,5 @@ function profileCtrl(CurrentUserService, $state, Multilingual, User){
   };
 
 
+
 }

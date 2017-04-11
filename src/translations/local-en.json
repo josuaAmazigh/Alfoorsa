@@ -69,6 +69,17 @@
     "USERS": "Users",
     "BUSINESSES": "Businesses",
     "STORES": "Stores"
+  },
+
+  "PROFILE":{
+    "NAME": "Name",
+    "LAST_NAME": "Last Name",
+    "PHONE": "Phone",
+    "EMAIL": "Email Address",
+    "INTERFACE_LANGUAGE": "Interface Language",
+    "BUSINESSES": "Businesses",
+    "STORES": "Stores",
+    "EDIT": "Edit"
   }
 
 }
