@@ -19,6 +19,21 @@ function profileCtrl(CurrentUserService, $state, Multilingual, User){
     });
   };
 
+  vm.editOn = false;
+  vm.editableName = 'field';
 
+  vm.enableEditor = function(field) {
+    vm.editOn = true;
+    vm.editableName = field;
+  };
+
+  vm.disableEditor = function() {
+    vm.editOn = false;
+  };
+
+  vm.saveUser = function() {
+    vm.title = vm.editableName;
+    vm.disableEditor();
+  };
 
 }

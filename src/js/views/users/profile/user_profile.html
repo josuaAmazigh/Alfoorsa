@@ -1,33 +1,36 @@
-<!-- <h1>My profile</h1>
+<h1>My profile</h1>
   <ul class="list-group nopadding">
 
     <li class="list-group-item border-left-0 border-rigth-0 border-bottom-0">
       <div class="col-sm-3 pull-sm-{{default_float}} nopadding">
         <strong>{{'PROFILE.NAME' | translate}}</strong>
       </div>
-      <div ng-show="editOn" class="col-sm-6 pull-sm-{{default_float}} nopadding">
-        <input ng-show="editOn" ng-model="editableName" type="text" placeholder="{{profile.currentUser.name}}">{{profile.currentUser.name}}
-        <a href="#" ng-click="save()">Save</a>
-        or
-        <a href="#" ng-click="disableEditor()">cancel</a>.
+      <div ng-hide="profile.editOn && profile.editableName == 'name'" class="col-sm-6 pull-sm-{{default_float}} nopadding">
+        {{profile.currentUser.name}}
       </div>
-      <div ng-hide="editOn" class="col-sm-3 pull-sm-{{default_float}} nopadding">
-        <a role="button"  ng-click="enableEditor()"><i class="fa fa-pencil fa-2x"></i>{{'PROFILE.EDIT' | translate}}</a>
+      <div ng-show="profile.editOn && profile.editableName == 'name'" class="col-sm-6 pull-sm-{{default_float}} nopadding">
+        <input  type="text" value="{{profile.currentUser.name}}">
+        <a href="#" ng-click="profile.saveUser()">Save</a>
+        or
+        <a href="#" ng-click="profile.disableEditor()">cancel</a>.
+      </div>
+      <div ng-hide="profile.editOn && profile.editableName == 'name'" class="col-sm-3 pull-sm-{{default_float}} nopadding">
+        <a role="button"  ng-click="profile.enableEditor('name')"><i class="fa fa-pencil fa-2x"></i>{{'PROFILE.EDIT' | translate}}</a>
       </div>
     </li>
-
-
-
 
     <li class="list-group-item border-left-0 border-rigth-0 border-bottom-0">
       <div class="col-sm-3 pull-sm-{{default_float}} nopadding">
         <strong>{{'PROFILE.LAST_NAME' | translate}}</strong>
       </div>
-      <div class="col-sm-6 pull-sm-{{default_float}} nopadding">
-        {{profile.currentUser.lastname}}
+      <div ng-show="profile.editOn && profile.editableName == 'lastname'" class="col-sm-6 pull-sm-{{default_float}} nopadding">
+        <input  type="text" value="{{profile.currentUser.lastname}}">{{profile.currentUser.lastname}}
+        <a href="#" ng-click="profile.saveUser()">Save</a>
+        or
+        <a href="#" ng-click="profile.disableEditor()">cancel</a>.
       </div>
-      <div class="col-sm-3 pull-sm-{{default_float}} nopadding">
-        <a role="button"><i class="fa fa-pencil fa-2x"></i>{{'PROFILE.EDIT' | translate}}</a>
+      <div ng-hide="profile.editOn && profile.editableName == 'lastname'" class="col-sm-3 pull-sm-{{default_float}} nopadding">
+        <a role="button" ng-click="profile.enableEditor('lastname')"><i class="fa fa-pencil fa-2x"></i>{{'PROFILE.EDIT' | translate}}</a>
       </div>
     </li>
     <li class="list-group-item border-left-0 border-rigth-0 border-bottom-0">
@@ -53,4 +56,3 @@
       </div>
     </li>
   </ul>
- -->
