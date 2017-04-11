@@ -7,7 +7,7 @@
   <button ng-click="Multilingual.changeLanguage('en')" translate="BUTTON_LANG_EN"></button>
   <button ng-click="Multilingual.changeLanguage('ar')" translate="BUTTON_LANG_AR"></button>
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul ng-show="main.user" class="navbar-nav {{default_move}}">
+    <ul ng-show="main.user" class="navbar-nav {{default_move}}"> 
       <a class="navbar-brand img-fluid" ui-sref="profile">{{ 'NAV_VAR.WELCOME' | translate }} {{main.user.name}}</a>
       <li class="nav-item">
         <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
