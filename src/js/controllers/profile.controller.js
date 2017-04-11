@@ -6,8 +6,6 @@ profileCtrl.$inject = ['CurrentUserService', '$state', 'Multilingual', 'User'];
 function profileCtrl(CurrentUserService, $state, Multilingual, User){
   const vm = this;
 
-  console.log(CurrentUserService.currentUser);
-
   vm.currentUser = CurrentUserService.currentUser;
 
   vm.updateUser = () => {

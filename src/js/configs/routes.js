@@ -39,9 +39,14 @@ function Router($stateProvider, $locationProvider, $urlRouterProvider){
   })
   .state('profile', {
     url: '/profile',
-    templateUrl: '/js/views/users/user_profile.html',
+    templateUrl: '/js/views/users/profile/Profile.html',
     resolve: {needAuthentication},
     controller: 'profileCtrl as profile'
+  })
+  .state('profile.user', {
+    url: '/user',
+    parent: 'profile',
+    templateUrl: '/js/views/users/profile/user_profile.html',
   });
   $urlRouterProvider.otherwise('/');
 }
