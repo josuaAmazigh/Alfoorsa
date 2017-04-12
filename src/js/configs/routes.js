@@ -39,7 +39,8 @@ function Router($stateProvider, $locationProvider, $urlRouterProvider){
   })
   .state('cnt', {
     url: '/cnt/:id',
-    templateUrl: '/js/views/famosos/admin-user-edit.html'
+    templateUrl: '/js/views/users/profile/user_profile.html',
+    controller: 'profileCtrl as profile'
   })
 
   .state('profile', {

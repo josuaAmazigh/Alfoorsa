@@ -2,21 +2,43 @@ angular
 .module('Alfoorsa')
 .controller('profileCtrl', profileCtrl);
 
-profileCtrl.$inject = ['CurrentUserService', '$state', 'Multilingual', 'User'];
-function profileCtrl(CurrentUserService, $state, Multilingual, User){
+profileCtrl.$inject = ['CurrentUserService', '$state', 'Multilingual', 'User', '$stateParams'];
+function profileCtrl(CurrentUserService, $state, Multilingual, User, $stateParams){
   const vm = this;
+  if($stateParams && $stateParams.id !== null){
+    User
+      .getUserById({id: $stateParams.id})
+      .$promise
+      .then(data => {
+        vm.currentUser = data.user;
+      }, (error) => {
+        console.log(error);
+      });
+  }else{
+    vm.currentUser = CurrentUserService.currentUser;
+  }
 
-  vm.currentUser = CurrentUserService.currentUser;
 
   vm.updateUser = () => {
-    User
-    .update()
-    .$promise
-    .then(data => {
-      console.log(data);
-    }, (error) => {
-      console.log(error);
-    });
+    if($stateParams && $stateParams.id !== null){
+      User
+        .updateUser({id: $stateParams.id})
+        .$promise
+        .then(data => {
+          console.log(data);
+        }, (error) => {
+          console.log(error);
+        });
+    }else{
+      User
+        .update()
+        .$promise
+        .then(data => {
+          console.log(data);
+        }, (error) => {
+          console.log(error);
+        });
+    }
   };
 
   vm.editOn = false;
