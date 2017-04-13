@@ -1,58 +1,22 @@
 <h1>My profile</h1>
   <ul class="list-group nopadding">
-
-    <li class="list-group-item border-left-0 border-rigth-0 border-bottom-0">
+    <li ng-repeat="field in profile.fieldsSelected" class="list-group-item border-left-0 border-rigth-0 border-bottom-0">
       <div class="col-sm-3 pull-sm-{{default_float}} nopadding">
-        <strong>{{'PROFILE.NAME' | translate}}</strong>
+        <strong>{{'PROFILE.'+field | uppercase | translate}}</strong>
       </div>
-      <div ng-hide="profile.editOn && profile.editableName == 'name'" class="col-sm-6 pull-sm-{{default_float}} nopadding">
-        {{profile.currentUser.name}}
+      <div ng-hide="profile.editOn && profile.editableName == field" class="col-sm-6 pull-sm-{{default_float}} nopadding">
+        {{profile.currentUser[field]}}
       </div>
-      <div ng-show="profile.editOn && profile.editableName == 'name'" class="col-sm-6 pull-sm-{{default_float}} nopadding">
-        <input  type="text" value="{{profile.currentUser.name}}">
-        <a href="#" ng-click="profile.saveUser()">Save</a>
-        or
-        <a href="#" ng-click="profile.disableEditor()">cancel</a>.
+      <div ng-show="profile.editOn && profile.editableName == field" class="col-sm-6 pull-sm-{{default_float}} nopadding">
+        <form class="new_user gl-show-field-errors" name="profileform_{{field}}" method="post" ng-submit="profile.saveUser(field)" novalidate>
+          <input  type="text" name="{{field}}" ng-value="profile.currentUser[field]" ng-pattern="profile.PATTERNS.NAME" ng-model="profile.user[field]">
+          <button type="submit" >{{'PROFILE.SAVE' | translate}}</button>
+          {{'PROFILE.OR' | translate}}
+          <button ng-click="profile.disableEditor()">{{'PROFILE.CANCEL' | translate}}</button>
+        </form>
       </div>
-      <div ng-hide="profile.editOn && profile.editableName == 'name'" class="col-sm-3 pull-sm-{{default_float}} nopadding">
-        <a role="button"  ng-click="profile.enableEditor('name')"><i class="fa fa-pencil fa-2x"></i>{{'PROFILE.EDIT' | translate}}</a>
-      </div>
-    </li>
-
-    <li class="list-group-item border-left-0 border-rigth-0 border-bottom-0">
-      <div class="col-sm-3 pull-sm-{{default_float}} nopadding">
-        <strong>{{'PROFILE.LAST_NAME' | translate}}</strong>
-      </div>
-      <div ng-show="profile.editOn && profile.editableName == 'lastname'" class="col-sm-6 pull-sm-{{default_float}} nopadding">
-        <input  type="text" value="{{profile.currentUser.lastname}}">{{profile.currentUser.lastname}}
-        <a href="#" ng-click="profile.saveUser()">Save</a>
-        or
-        <a href="#" ng-click="profile.disableEditor()">cancel</a>.
-      </div>
-      <div ng-hide="profile.editOn && profile.editableName == 'lastname'" class="col-sm-3 pull-sm-{{default_float}} nopadding">
-        <a role="button" ng-click="profile.enableEditor('lastname')"><i class="fa fa-pencil fa-2x"></i>{{'PROFILE.EDIT' | translate}}</a>
-      </div>
-    </li>
-    <li class="list-group-item border-left-0 border-rigth-0 border-bottom-0">
-      <div class="col-sm-3 pull-sm-{{default_float}} nopadding">
-        <strong>{{'PROFILE.PHONE' | translate}}</strong>
-      </div>
-      <div class="col-sm-6 pull-sm-{{default_float}} nopadding">
-        {{profile.currentUser.phone}}
-      </div>
-      <div class="col-sm-3 pull-sm-{{default_float}} nopadding">
-        <a role="button"><i class="fa fa-pencil fa-2x"></i>{{'PROFILE.EDIT' | translate}}</a>
-      </div>
-    </li>
-    <li class="list-group-item border-left-0 border-rigth-0 border-bottom-0">
-      <div class="col-sm-3 pull-sm-{{default_float}} nopadding">
-        <strong>{{'PROFILE.INTERFACE_LANGUAGE' | translate}}</strong>
-      </div>
-      <div class="col-sm-6 pull-sm-{{default_float}} nopadding">
-        {{profile.currentUser.preferredLanguage}}
-      </div>
-      <div class="col-sm-3 pull-sm-{{default_float}} nopadding">
-        <a role="button"><i class="fa fa-pencil fa-2x"></i>{{'PROFILE.EDIT' | translate}}</a>
+      <div ng-hide="profile.editOn && profile.editableName == field" class="col-sm-3 pull-sm-{{default_float}} nopadding">
+        <a role="button"  ng-click="profile.enableEditor(field)"><i class="fa fa-pencil fa-2x"></i>{{'PROFILE.EDIT' | translate}}</a>
       </div>
     </li>
   </ul>

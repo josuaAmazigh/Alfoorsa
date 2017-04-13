@@ -19,10 +19,10 @@
     "VALID_EMAIL": "Enter a valid Email",
     "SIGN_IN": "Sign in",
     "SIGN_UP": "Sign up",
-    "VALID_LAST_NAME": "Enter a valid Last Name",
+    "VALID_LASTNAME": "Enter a valid Last Name",
     "VALID_NAME": "Enter a valid Name",
     "NAME": "Name",
-    "LAST_NAME": "Last Name"
+    "LASTNAME": "Last Name"
   },
 
   "ERROR_CODES": {
@@ -59,10 +59,10 @@
 
   "ADMIN_PANEL":{
     "NAME": "Name",
-    "LAST_NAME": "Last Name",
+    "LASTNAME": "Last Name",
     "PHONE": "Phone",
     "EMAIL": "Email Address",
-    "INTERFACE_LANGUAGE": "Interface Language",
+    "PREFERREDLANGUAGE": "Interface Language",
     "TYPE": "Type",
     "ROLE": "Role",
     "NEED_REVIEW": "Need Review",
@@ -73,13 +73,16 @@
 
   "PROFILE":{
     "NAME": "Name",
-    "LAST_NAME": "Last Name",
+    "LASTNAME": "Last Name",
     "PHONE": "Phone",
     "EMAIL": "Email Address",
-    "INTERFACE_LANGUAGE": "Interface Language",
+    "PREFERREDLANGUAGE": "Interface Language",
     "BUSINESSES": "Businesses",
     "STORES": "Stores",
-    "EDIT": "Edit"
+    "EDIT": "Edit",
+    "SAVE": "Save",
+    "CANCEL": "Cancel",
+    "OR": "|"
   }
 
 }

@@ -2,11 +2,13 @@ angular
 .module('Alfoorsa')
 .controller('RegisterCtrl', RegisterCtrl);
 
-RegisterCtrl.$inject = ['$state', '$http', 'API', 'Multilingual', 'URL', 'CustomMethods'];
-function RegisterCtrl($state, $http, API, Multilingual, URL, CustomMethods){
+RegisterCtrl.$inject = ['$state', '$http', 'API', 'Multilingual', 'URL', 'CustomMethods', 'PATTERNS'];
+function RegisterCtrl($state, $http, API, Multilingual, URL, CustomMethods, PATTERNS){
   const vm = this;
 
   vm.Multilingual = Multilingual;
+
+  vm.PATTERNS = PATTERNS;
 
   vm.passwordMatch = (registerform) => {
     return !(registerform.password && registerform.password_confirmation && registerform.password.$viewValue === registerform.password_confirmation.$viewValue);

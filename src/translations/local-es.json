@@ -19,10 +19,10 @@
     "VALID_EMAIL": "Introduzca un correo válido",
     "SIGN_IN": "Conectarse",
     "SIGN_UP": "Registrarse",
-    "VALID_LAST_NAME": "Apellido no válido",
+    "VALID_LASTNAME": "Apellido no válido",
     "VALID_NAME": "Nombre no válido",
     "NAME": "Nombre",
-    "LAST_NAME": "Apellido"
+    "LASTNAME": "Apellido"
   },
 
   "ERROR_CODES": {
@@ -59,10 +59,10 @@
 
   "ADMIN_PANEL":{
     "NAME": "Nombre",
-    "LAST_NAME": "Apellido",
+    "LASTNAME": "Apellido",
     "PHONE": "Teléfono",
     "EMAIL": "Dirección de Correo",
-    "INTERFACE_LANGUAGE": "Idioma favorito",
+    "PREFERREDLANGUAGE": "Idioma favorito",
     "TYPE": "Tipo",
     "ROLE": "Rol",
     "NEED_REVIEW": "Necesita Revisión",

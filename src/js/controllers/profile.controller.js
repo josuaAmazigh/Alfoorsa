@@ -2,9 +2,14 @@ angular
 .module('Alfoorsa')
 .controller('profileCtrl', profileCtrl);
 
-profileCtrl.$inject = ['CurrentUserService', '$state', 'Multilingual', 'User', '$stateParams'];
-function profileCtrl(CurrentUserService, $state, Multilingual, User, $stateParams){
+profileCtrl.$inject = ['CurrentUserService', '$state', 'Multilingual', 'User', '$stateParams', 'PATTERNS'];
+function profileCtrl(CurrentUserService, $state, Multilingual, User, $stateParams, PATTERNS){
   const vm = this;
+
+
+  vm.fieldsSelected = ['name', 'lastname', 'phone', 'preferredLanguage'];
+
+  vm.PATTERNS = PATTERNS;
 
   if($stateParams && $stateParams.id !== null && $stateParams.id !== undefined){
     User
@@ -32,7 +37,7 @@ function profileCtrl(CurrentUserService, $state, Multilingual, User, $stateParam
         });
     }else{
       User
-        .update()
+        .update({user: vm.userTemp})
         .$promise
         .then(data => {
           console.log(data);
@@ -54,9 +59,15 @@ function profileCtrl(CurrentUserService, $state, Multilingual, User, $stateParam
     vm.editOn = false;
   };
 
-  vm.saveUser = function() {
-    vm.title = vm.editableName;
-    vm.disableEditor();
+  vm.saveUser = function(field) {
+    console.log(field);
+    vm.userTemp = {[field]: field};
+    //vm.userTemp[field] = vm.user[field];
+    console.log(vm.user);
+    console.log(vm.userTemp);
+    console.log(eval("profileform_"+field)[field].value);
+    // vm.updateUser();
+    // vm.disableEditor();
   };
 
 }

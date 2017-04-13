@@ -3,14 +3,14 @@
     <form class="new_new_user gl-show-field-errors" name="registerform"  method="post" ng-submit="register.registeros()" novalidate>
       <div class="form-group">
         <label for="name">{{ 'REGISTER_FORM.NAME' | translate }}</label>
-        <input class="form-control top" id="name" ng-pattern="/^[a-zA-ZàáâäãåąčćēęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĒĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-]{2,}$/u" type="text" name="name" ng-model="register.user.name" required/>
+        <input class="form-control top" id="name" ng-pattern="register.PATTERNS.NAME" type="text" name="name" ng-model="register.user.name" required/>
         <p ng-show="registerform.name.$invalid && registerform.name.$dirty" class="gl-field-error hide">{{ 'REGISTER_FORM.VALID_NAME' | translate }}</p>
       </div>
 
       <div class="form-group">
-        <label for="lastname">{{ 'REGISTER_FORM.LAST_NAME' | translate }}</label>
-        <input class="form-control middle" id="lastname" ng-pattern="/^[a-zA-ZàáâäãåąčćēęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĒĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-]{2,}$/u" type="text" name="lastname" ng-model="register.user.lastname" required/>
-        <p ng-show="registerform.lastname.$invalid && registerform.lastname.$dirty" class="gl-field-error hide">{{ 'REGISTER_FORM.VALID_LAST_NAME' | translate }}</p>
+        <label for="lastname">{{ 'REGISTER_FORM.LASTNAME' | translate }}</label>
+        <input class="form-control middle" id="lastname" ng-pattern="register.PATTERNS.NAME" type="text" name="lastname" ng-model="register.user.lastname" required/>
+        <p ng-show="registerform.lastname.$invalid && registerform.lastname.$dirty" class="gl-field-error hide">{{ 'REGISTER_FORM.VALID_LASTNAME' | translate }}</p>
       </div>
 
       <div class="form-group">
