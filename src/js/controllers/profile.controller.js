@@ -5,6 +5,7 @@ angular
 profileCtrl.$inject = ['CurrentUserService', '$state', 'Multilingual', 'User', '$stateParams'];
 function profileCtrl(CurrentUserService, $state, Multilingual, User, $stateParams){
   const vm = this;
+
   if($stateParams && $stateParams.id !== null){
     User
       .getUserById({id: $stateParams.id})

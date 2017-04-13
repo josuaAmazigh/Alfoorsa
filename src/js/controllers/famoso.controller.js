@@ -2,8 +2,8 @@ angular
 .module('Alfoorsa')
 .controller('famososCtrl', famososCtrl);
 
-famososCtrl.$inject = ['$rootScope','CurrentUserService', '$state', 'Multilingual', 'Users', '$window'];
-function famososCtrl($rootScope, CurrentUserService, $state, Multilingual, Users, $window){
+famososCtrl.$inject = ['$rootScope','CurrentUserService', '$state', 'Multilingual', 'User', '$window'];
+function famososCtrl($rootScope, CurrentUserService, $state, Multilingual, User, $window){
   const vm = this;
 
   if(CurrentUserService.currentUser.role !== 'ADMIN'){
@@ -14,8 +14,8 @@ function famososCtrl($rootScope, CurrentUserService, $state, Multilingual, Users
   $rootScope.sortReverse  = false;  // set the default sort order
 
   vm.getUsers = () => {
-    Users
-    .get()
+    User
+    .getAll()
     .$promise
     .then(data => {
       console.log(data);
