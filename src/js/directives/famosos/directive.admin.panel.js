@@ -9,8 +9,5 @@ function adminPanel(){
   directive.restrict = 'E';
   directive.replace = true;
   directive.templateUrl =  'js/views/famosos/admin-panel.html';
-  // directive.scope = {
-  //     question: '='
-  // };
   return directive;
 }
