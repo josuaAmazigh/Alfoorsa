@@ -6,7 +6,7 @@ profileCtrl.$inject = ['CurrentUserService', '$state', 'Multilingual', 'User', '
 function profileCtrl(CurrentUserService, $state, Multilingual, User, $stateParams){
   const vm = this;
 
-  if($stateParams && $stateParams.id !== null){
+  if($stateParams && $stateParams.id !== null && $stateParams.id !== undefined){
     User
       .getUserById({id: $stateParams.id})
       .$promise
@@ -21,7 +21,7 @@ function profileCtrl(CurrentUserService, $state, Multilingual, User, $stateParam
 
 
   vm.updateUser = () => {
-    if($stateParams && $stateParams.id !== null){
+    if($stateParams && $stateParams.id !== null && $stateParams.id !== undefined){
       User
         .updateUser({id: $stateParams.id})
         .$promise
