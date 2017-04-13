@@ -7,6 +7,6 @@ function profileMenu(){
   //'A' == attribute, 'E' == element, 'C' == class
   directive.restrict = 'E';
   directive.replace = true;
-  directive.templateUrl =  'js/views/users/profile/user_menu.html';
+  directive.templateUrl =  '/views/users/profile/user_menu.html';
   return directive;
 }

@@ -8,6 +8,6 @@ function register(){
   //'A' == attribute, 'E' == element, 'C' == class
   directive.restrict = 'E';
   directive.replace = true;
-  directive.templateUrl =  'js/views/loginRegister/register_form.html';
+  directive.templateUrl =  '/views/loginRegister/register_form.html';
   return directive;
 }

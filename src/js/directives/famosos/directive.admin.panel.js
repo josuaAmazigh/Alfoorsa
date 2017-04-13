@@ -8,6 +8,6 @@ function adminPanel(){
   //'A' == attribute, 'E' == element, 'C' == class
   directive.restrict = 'E';
   directive.replace = true;
-  directive.templateUrl =  'js/views/famosos/admin-panel.html';
+  directive.templateUrl =  '/views/famosos/admin-panel.html';
   return directive;
 }

@@ -13,6 +13,7 @@
     "destDir": "public/",
     "src": {
       "js": "src/js/",
+      "html": "src/views/",
       "scss": "src/scss/",
       "fonts": "src/fonts/",
       "images": "src/images/",
@@ -20,6 +21,7 @@
     },
     "dest": {
       "js": "public/js/",
+      "html": "public/views/",
       "css": "public/css/",
       "fonts": "public/fonts/",
       "images": "public/images/",
