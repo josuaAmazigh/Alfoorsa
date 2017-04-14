@@ -52,7 +52,6 @@ function Router($stateProvider, $locationProvider, $urlRouterProvider){
   .state('profile.user', {
     url: '/user',
     parent: 'profile',
-    controller: 'profileCtrl as profile',
     templateUrl: '/views/users/profile/user_profile.html'
   });
   $urlRouterProvider.otherwise('/');
