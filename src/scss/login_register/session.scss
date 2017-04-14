@@ -1,121 +1,142 @@
-.login-page .new-session-tabs {
+.login-page {
+  label {
+    font-weight: normal;
+  }
+  .container {
+    max-width: 960px;
+  }
+
+  .submit-container {
+    margin-top: 16px;
+  }
+
+  .new-session-tabs {
     display: flex;
     box-shadow: 0 0 0 1px #e5e5e5;
     border-top-right-radius: 2px;
     border-top-left-radius: 2px;
-}
-.nav-links {
-    padding: 0;
-    margin: 0;
-    list-style: none;
-    height: auto;
-    border-bottom: 1px solid #e5e5e5;
-}
-.login-page .new-session-tabs li.active {
-    border-bottom: 1px solid #e5e5e5;
-}
-.login-page .new-session-tabs li:first-of-type {
-    border-left: none;
-    border-top-left-radius: 2px;
-}
-.login-page .new-session-tabs li {
-    flex: 1;
-    text-align: center;
-    border-left: 1px solid #e5e5e5;
-}
-.nav-links li {
-    display: inline-block;
-}
-.nav-tabs>li {
-    float: left;
-    margin-bottom: -1px;
-}
-.login-page .new-session-tabs li.active a {
-    border: none;
-    border-bottom: 2px solid #4a8bee;
-    color: #000;
-}
-.login-page .new-session-tabs li a {
-    width: 100%;
-    font-size: 18px;
-    text-decoration: none;
-}
-.nav-links li.active a {
-    border-bottom: 2px solid #4a8bee;
-    color: #000;
-    font-weight: 600;
-}
-.nav-tabs>li.active>a, .nav-tabs>li.active>a:hover, .nav-tabs>li.active>a:focus {
-    color: #555555;
-    background-color: #fff;
-    cursor: default;
-}
-.nav-links li a {
-    display: inline-block;
-    padding: 10px;
-    padding-bottom: 11px;
-    margin-bottom: -1px;
-    font-size: 14px;
-    line-height: 28px;
-    color: rgba(0,0,0,0.55);
-    border-bottom: 2px solid transparent;
-}
-.nav-tabs>li>a {
-    margin-right: 2px;
-    line-height: 1.42857143;
-    border: 1px solid transparent;
-    border-radius: 3px 3px 0 0;
-}
 
-.tab-content {
-    overflow: visible;
-}
-.login-page .login-box, .login-page .omniauth-container {
+    li {
+      flex: 1;
+      text-align: center;
+      border-left: 1px solid #e5e5e5;
+      a {
+        width: 100%;
+        font-size: 18px;
+        text-decoration: none;
+      }
+      &.active {
+        border-bottom: 1px solid #e5e5e5;
+        a {
+          border: none;
+          border-bottom: 2px solid #4a8bee;
+          color: #000;
+        }
+      }
+      &:first-of-type {
+        border-left: none;
+        border-top-left-radius: 2px;
+      }
+    }
+  }
+
+  .login-box, .omniauth-container {
     box-shadow: 0 0 0 1px #e5e5e5;
     border-bottom-right-radius: 2px;
     border-bottom-left-radius: 2px;
     padding: 15px;
-}
-.login-page .login-box .login-body, .login-page .omniauth-container .login-body {
-    font-size: 13px;
-}
-.login-page label {
-    font-weight: normal;
+    .login-body {
+      font-size: 13px;
+    }
+  }
+
 }
 
-.login-page .submit-container {
-    margin-top: 16px;
+.nav-links {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  height: auto;
+  border-bottom: 1px solid #e5e5e5;
+  li {
+    display: inline-block;
+    a {
+      display: inline-block;
+      padding: 10px;
+      padding-bottom: 11px;
+      margin-bottom: -1px;
+      font-size: 14px;
+      line-height: 28px;
+      color: rgba(0,0,0,0.55);
+      border-bottom: 2px solid transparent;
+    }
+  }
+  li.active {
+    a {
+      border-bottom: 2px solid #4a8bee;
+      color: #000;
+      font-weight: 600;
+    }
+  }
 }
-.btn.btn-success, .btn.btn-new, .btn.btn-create, .btn.comment-btn, .btn.btn-save {
+
+
+.nav-tabs>li {
+    float: left;
+    margin-bottom: -1px;
+}
+
+.nav-tabs>li>a {
+  margin-right: 2px;
+  line-height: 1.42857143;
+  border: 1px solid transparent;
+  border-radius: 3px 3px 0 0;
+}
+
+.nav-tabs>li.active>a, .nav-tabs>li.active>a:hover, .nav-tabs>li.active>a:focus {
+  color: #555555;
+  background-color: #fff;
+  cursor: default;
+}
+
+.tab-content {
+  overflow: visible;
+}
+
+
+.btn{
+  &.btn-success, &.btn-new, &.btn-create, &.comment-btn, &.btn-save {
     background-color: #3cbd70;
     border-color: #36aa65;
     color: #fff;
-}
-.btn.btn-info:hover, .btn.btn-info:focus, .btn.btn-register:hover, .btn.btn-register:focus {
+  }
+
+  &.btn-info:hover, &.btn-info:focus, &.btn-register:hover, &.btn-register:focus {
     background-color: #1a97d5;
     border-color: #1887be;
     color: #fff;
-}
-.btn.btn-info, .btn.btn-register {
+  }
+
+  &.btn-info, &.btn-register {
     background-color: #2ea8e5;
     border-color: #1c9dde;
     color: #fff;
-}
-.btn:hover, .btn:focus {
+  }
+
+  &:hover, &:focus {
     background-color: #f0f0f0;
     border-color: #e3e3e3;
-    color: rgba(0,0,0,0.85);
-}
-.btn:hover, .btn:focus, .btn.focus {
+  }
+
+  &:hover, &:focus, &.focus {
     color: rgba(0,0,0,0.85);
     text-decoration: none;
+  }
 }
-.login-page .container {
-    max-width: 960px;
-}
+
 .navless-container {
-    margin-top: 50px;
-    padding-top: 32px;
+  margin-top: 50px;
+  padding-top: 32px;
 }
 
 .form-control:focus {

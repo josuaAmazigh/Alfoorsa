@@ -1,20 +1,13 @@
 @font-face {
-    font-family: logoFont;
-    src: url(../fonts/ARJULIAN.ttf);
-    font-weight: bold;
+  font-family: logoFont;
+  src: url(../fonts/ARJULIAN.ttf);
+  font-weight: bold;
 }
 
-.icon_dropdown_ltr, .icon_dropdown_rtl{
-  width: 20px;
-  text-align: left;
-}
-.icon_dropdown_ltr{ padding-right: 26px; }
-.icon_dropdown_rtl{ padding-left:  26px; }
+.icon_dropdown_ltr, .icon_dropdown_rtl{ width: 20px; }
+.icon_dropdown_ltr{ padding-right: 26px;  text-align: left;}
+.icon_dropdown_rtl{ padding-left:  26px;  text-align: right;}
 
-.dropdown-item_ltr{
-  text-align: left;
-}
+.dropdown-item_ltr{ text-align: left; }
 
-.dropdown-item_rtl{
-  text-align: right;
-}
+.dropdown-item_rtl{ text-align: right; }

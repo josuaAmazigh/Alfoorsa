@@ -1,14 +1,29 @@
-<ul class="list-group nopadding">
-  <li role="button" class="list-group-item list-group-item-action h4" ng-click="famosos.getUsers()" ui-sref="erdamatuput.users">
-    <i class="fa fa-users icon_menu_{{default_direction}}" aria-hidden="true"></i>{{'ADMIN_PANEL.USERS'  | translate }}
-    <span ng-show="famosos.countReviews.length !== 0" class="badge badge-pill badge-color badge-position-{{default_direction}} {{default_move}}">{{famosos.countReviews.length}}</span>
-  </li>
-  <li role="button" class="list-group-item list-group-item-action h4">
-    <i class="fa fa-building icon_menu_{{default_direction}}" aria-hidden="true"></i>{{'ADMIN_PANEL.BUSINESSES'  | translate }}
-    <span ng-show="famosos.countReviews.length !== 0" class="badge badge-pill badge-color badge-position-{{default_direction}} {{default_move}}">4</span>
-  </li>
-  <li role="button" class="list-group-item list-group-item-action h4">
-    <i class="fa fa-shopping-bag icon_menu_{{default_direction}}" aria-hidden="true"></i>{{'ADMIN_PANEL.STORES'  | translate }}
-    <span ng-show="famosos.countReviews.length !== 0" class="badge badge-pill badge-color badge-position-{{default_direction}} {{default_move}}">5</span>
-  </li>
-</ul>
+<div id="sidebar-wrapper_{{default_direction}}" class="bg-inverse text-white">
+  <ul class="sidebar-nav col-lg-12 text-center nopadding">
+    <li class="sidebar-brand">
+      <a href="#" class="img-fluid">ALFOORSA</a>
+    </li>
+    <div role="separator" class="dropdown-divider"></div>
+    <li role="button" class="h6 text-center" ng-click="famosos.getUsers()" ui-sref="erdamatuput.users">
+      <div class="block-justify">
+        <i class="fa fa-users fa-3x" aria-hidden="true"></i><br>
+        {{'ADMIN_PANEL.USERS' | translate }}
+      </div>
+      <span ng-show="famosos.countReviews.length !== 0" class="badge badge-pill badge-color badge-position-{{default_direction}} {{default_move}}">{{famosos.countReviews.length}}</span>
+    </li>
+    <li role="button" class="h6 text-center">
+      <div class="block-justify">
+        <i class="fa fa-building fa-3x" aria-hidden="true"></i><br>
+        {{'ADMIN_PANEL.BUSINESSES' | translate }}
+      </div>
+      <span ng-show="famosos.countReviews.length !== 0" class="badge badge-pill badge-color badge-position-{{default_direction}} {{default_move}}">4</span>
+    </li>
+    <li role="button" class="h6 text-center">
+      <div class="block-justify">
+        <i class="fa fa-shopping-bag fa-3x" aria-hidden="true"></i><br>
+        {{'ADMIN_PANEL.STORES' | translate }}
+      </div>
+      <span ng-show="famosos.countReviews.length !== 0" class="badge badge-pill badge-color badge-position-{{default_direction}} {{default_move}}">5</span>
+    </li>
+  </ul>
+</div>

@@ -18,7 +18,14 @@
 .badge-position-ltr, .badge-position-rtl{
   position: relative;
   z-index: 1000;
-  top: -25px;
+  top: -50px;
 }
 .badge-position-ltr{ right: -35px; }
 .badge-position-rtl{ left: -35px; }
+
+
+.fill {
+  position: relative;
+  width: 100%;
+  border:1px solid red;
+}

@@ -1,0 +1,138 @@
+@mixin transition($speed) {
+  -webkit-transition: all $speed ease;
+     -moz-transition: all $speed ease;
+       -o-transition: all $speed ease;
+          transition: all $speed ease;
+}
+
+$sidebarWidth: 250px;
+
+/*#############  GENERAL ########################*/
+#sidebar-wrapper {
+  z-index: 1000;
+  position: fixed;
+  width: $sidebarWidth;
+  height: 100%;
+  overflow-y: auto;
+  @include transition(0.5s);
+}
+#page-content-wrapper {
+  width: 100%;
+  position: absolute;
+  padding: 15px;
+}
+
+/*#############  LTR : Left-To-Rigth ########################*/
+/* Toggle Styles */
+.toggled_ltr {
+  padding-left: $sidebarWidth;
+  @include transition(0.5s);
+
+  #sidebar-wrapper_ltr {
+    @extend #sidebar-wrapper;
+    left: $sidebarWidth;
+    margin-left: -$sidebarWidth;
+  }
+
+  #page-content-wrapper_ltr {
+    @extend #page-content-wrapper;
+    margin-right: -$sidebarWidth;
+  }
+}
+
+@media(min-width:768px) {
+  .toggled_ltr {
+    padding-left: $sidebarWidth;
+
+    #sidebar-wrapper_ltr {
+      width: $sidebarWidth;
+    }
+
+    #page-content-wrapper_ltr {
+      position: relative;
+      margin-right: 0;
+      padding: 20px;
+    }
+  }
+}
+
+/*#############  RTL : Rigth-To-Left ########################*/
+.toggled_rtl {
+  padding-right: $sidebarWidth;
+  @include transition(0.5s);
+
+  #sidebar-wrapper_rtl {
+    @extend #sidebar-wrapper;
+    right: $sidebarWidth;
+    margin-right: -$sidebarWidth;
+    @include transition(0.5s);
+  }
+
+  #page-content-wrapper_rtl {
+    @extend #page-content-wrapper;
+    margin-left: -$sidebarWidth;
+  }
+}
+
+@media(min-width:768px) {
+  .toggled_rtl {
+    padding-right: $sidebarWidth;
+
+    #sidebar-wrapper_rtl {
+      width: $sidebarWidth;
+    }
+
+    #page-content-wrapper_rtl {
+      position: relative;
+      margin-left: 0;
+      padding: 20px;
+    }
+  }
+}
+
+
+/*#################################################*/
+/* Sidebar Styles */
+.sidebar-nav {
+  position: absolute;
+  top: 0;
+  width: $sidebarWidth;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  li {
+    text-indent: 0px;
+    line-height: 40px;
+
+    a {
+      display: block;
+      text-decoration: none;
+      color: #999999;
+
+      &:hover {
+        text-decoration: none;
+        color: #fff;
+        background: rgba(255,255,255,0.2);
+      }
+
+      &:active, &:focus {
+        text-decoration: none;
+      }
+    }
+  }
+
+  > .sidebar-brand {
+    height: 65px;
+    font-size: 18px;
+    line-height: 75px;
+    a {
+      color: #999999;
+
+      &:hover {
+        color: #fff;
+        background: none;
+      }
+    }
+  }
+}
