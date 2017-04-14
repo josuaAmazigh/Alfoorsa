@@ -11,11 +11,11 @@ function MainCtrl($rootScope, CurrentUserService, $state, Multilingual){
   vm.rootScope = $rootScope;
 
   $rootScope.$on('loggedIn', () => {
-    vm.user = CurrentUserService.currentUser;
+    $rootScope.CurrentUserService = CurrentUserService;
   });
 
   $rootScope.$on('loggedOut', () => {
-    vm.user = CurrentUserService.currentUser;
+    $rootScope.CurrentUserService = CurrentUserService;
   });
 
   vm.logout = () => {

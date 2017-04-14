@@ -82,7 +82,11 @@
     "EDIT": "Edit",
     "SAVE": "Save",
     "CANCEL": "Cancel",
-    "OR": "|"
+    "OR": "|",
+    "LANG_EN": "English",
+    "LANG_ES": "Español",
+    "LANG_AR": "العربية",
+    "LANG_FR": "Français"
   }
 
 }

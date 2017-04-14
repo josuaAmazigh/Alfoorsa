@@ -6,15 +6,18 @@ profileCtrl.$inject = ['CurrentUserService', '$state', 'Multilingual', 'User', '
 function profileCtrl(CurrentUserService, $state, Multilingual, User, $stateParams, PATTERNS){
   const vm = this;
 
+  vm.chooseLanguage = ['ar', 'es', 'en', 'fr'];
   vm.fieldsSelected = ['name', 'lastname', 'phone', 'preferredLanguage'];
   vm.PATTERNS = PATTERNS;
 
   if($stateParams && $stateParams.id !== null && $stateParams.id !== undefined){
     User
-      .getUserById({id: $stateParams.id})
+      .getUserById({id: $stateParams.id, user: vm.userTemp})
       .$promise
       .then(data => {
         vm.currentUser = data.user;
+        CurrentUserService.currentUser = data.user;
+        Multilingual.changeLanguage(data.user.preferredLanguage);
       }, (error) => {
         console.log(error);
       });
@@ -26,10 +29,12 @@ function profileCtrl(CurrentUserService, $state, Multilingual, User, $stateParam
   vm.updateUser = () => {
     if($stateParams && $stateParams.id !== null && $stateParams.id !== undefined){
       User
-        .updateUser({id: $stateParams.id})
+        .updateUser({id: $stateParams.id, user: vm.userTemp})
         .$promise
         .then(data => {
-          console.log(data);
+          vm.currentUser = data.user;
+          CurrentUserService.currentUser = data.user;
+          Multilingual.changeLanguage(data.user.preferredLanguage);
         }, (error) => {
           console.log(error);
         });
@@ -38,7 +43,9 @@ function profileCtrl(CurrentUserService, $state, Multilingual, User, $stateParam
         .update({user: vm.userTemp})
         .$promise
         .then(data => {
-          console.log(data);
+          vm.currentUser = data.user;
+          CurrentUserService.currentUser = data.user;
+          Multilingual.changeLanguage(data.user.preferredLanguage);
         }, (error) => {
           console.log(error);
         });
@@ -58,13 +65,10 @@ function profileCtrl(CurrentUserService, $state, Multilingual, User, $stateParam
   };
 
   vm.saveUser = (field) => {
-    console.log(field);
-    vm.userTemp = {[field]: field};
-    //vm.userTemp[field] = vm.user[field];
-    console.log(vm.user);
-    console.log(vm.userTemp);
-    // vm.updateUser();
-    // vm.disableEditor();
+    vm.userTemp = {[field]: vm.user[field]};
+    vm.updateUser();
+    vm.disableEditor();
   };
+
 
 }

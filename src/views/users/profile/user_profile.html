@@ -11,11 +11,13 @@
 
 
         <form class="new_user gl-show-field-errors" name="profileform_{{field}}" method="post" ng-submit="profile.saveUser(field)" novalidate>
-
-          <input  type="text" name="{{field}}" ng-value="profile.currentUser[field]" ng-pattern="profile.PATTERNS.NAME" ng-model="profile.user[field]">
+          <select ng-model="profile.user[field]" ng-if="field === 'preferredLanguage'">
+            <option  ng-repeat="language in profile.chooseLanguage" value="{{language}}" ng-selected="profile.currentUser.preferredLanguage === language">{{'PROFILE.LANG_'+ language | uppercase | translate}}</option>
+          </select>
+          <input ng-if="field !== 'preferredLanguage'" type="text" name="{{field}}" ng-value="profile.currentUser[field]" ng-pattern="profile.PATTERNS.NAME" ng-model="profile.user[field]">
           <button type="submit" >{{'PROFILE.SAVE' | translate}}</button>
           {{'PROFILE.OR' | translate}}
-          <button ng-click="profile.disableEditor()">{{'PROFILE.CANCEL' | translate}}</button>
+          <button type="reset" ng-click="profile.disableEditor()">{{'PROFILE.CANCEL' | translate}}</button>
 
         </form>
 
