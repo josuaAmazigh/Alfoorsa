@@ -4,7 +4,7 @@ angular
 
 const regularExpression = () => {
   // Declaración de los regex
-  const name = /^[a-zA-ZàáâäãåąčćēęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĒĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-]{2,}$/u;
+  const name = /^[a-zء-يàáâäãåąčćēęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĒĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð '-]{2,}$/ui;
 
   // Devolvemos el objeto con los regex
   return {
