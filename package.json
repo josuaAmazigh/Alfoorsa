@@ -64,7 +64,8 @@
     "gulp-replace": "^0.5.4",
     "nodemailer": "^3.1.7",
     "request-promise": "^4.2.0",
-    "tether": "^1.4.0"
+    "tether": "^1.4.0",
+    "three": "^0.84.0"
   },
   "devDependencies": {
     "babel-cli": "^6.18.0",

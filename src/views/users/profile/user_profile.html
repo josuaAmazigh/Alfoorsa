@@ -5,26 +5,26 @@
         <strong>{{'PROFILE.'+field | uppercase | translate}}</strong>
       </div>
       <div ng-hide="profile.editOn && profile.editableName == field" class="col-sm-6 pull-sm-{{default_float}} nopadding">
-        {{profile.currentUser[field]}}
+        <span ng-if="field === 'preferredLanguage'">
+          {{'PROFILE.LANG_'+ profile.currentUser.preferredLanguage | uppercase | translate}}
+        </span>
+        <span ng-if="field !== 'preferredLanguage'">
+          {{profile.currentUser[field]}}
+        </span>
       </div>
       <div ng-show="profile.editOn && profile.editableName == field"  class="col-sm-6 pull-sm-{{default_float}} nopadding">
-
-
         <form class="new_user gl-show-field-errors" name="profileform_{{field}}" method="post" ng-submit="profile.saveUser(field)" novalidate>
           <select ng-model="profile.user[field]" ng-if="field === 'preferredLanguage'">
             <option  ng-repeat="language in profile.chooseLanguage" value="{{language}}" ng-selected="profile.currentUser.preferredLanguage === language">{{'PROFILE.LANG_'+ language | uppercase | translate}}</option>
           </select>
           <input ng-if="field !== 'preferredLanguage'" type="text" name="{{field}}" ng-value="profile.currentUser[field]" ng-pattern="profile.PATTERNS.NAME" ng-model="profile.user[field]">
-          <button type="submit" >{{'PROFILE.SAVE' | translate}}</button>
+          <button ng-confirm-message="Are you sure?" >{{'PROFILE.SAVE' | translate}}</button>
           {{'PROFILE.OR' | translate}}
           <button type="reset" ng-click="profile.disableEditor()">{{'PROFILE.CANCEL' | translate}}</button>
-
         </form>
-
-
       </div>
       <div ng-hide="profile.editOn && profile.editableName == field" class="col-sm-3 pull-sm-{{default_float}} nopadding">
-        <a role="button"  ng-click="profile.enableEditor(field)"><i class="fa fa-pencil fa-2x"></i>{{'PROFILE.EDIT' | translate}}</a>
+        <a role="button" ng-click="profile.enableEditor(field)"><i class="fa fa-pencil fa-2x"></i>{{'PROFILE.EDIT' | translate}}</a>
       </div>
     </li>
   </ul>

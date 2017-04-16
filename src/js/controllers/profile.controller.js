@@ -6,10 +6,6 @@ profileCtrl.$inject = ['CurrentUserService', '$state', 'Multilingual', 'User', '
 function profileCtrl(CurrentUserService, $state, Multilingual, User, $stateParams, PATTERNS){
   const vm = this;
 
-  vm.chooseLanguage = ['ar', 'es', 'en', 'fr'];
-  vm.fieldsSelected = ['name', 'lastname', 'phone', 'preferredLanguage'];
-  vm.PATTERNS = PATTERNS;
-
   if($stateParams && $stateParams.id !== null && $stateParams.id !== undefined){
     User
       .getUserById({id: $stateParams.id, user: vm.userTemp})
@@ -25,6 +21,12 @@ function profileCtrl(CurrentUserService, $state, Multilingual, User, $stateParam
     vm.currentUser = CurrentUserService.currentUser;
   }
 
+  vm.chooseLanguage = ['ar', 'es', 'en', 'fr'];
+  vm.fieldsSelected = ['name', 'lastname', 'phone', 'preferredLanguage'];
+  vm.PATTERNS = PATTERNS;
+  //These 2 lines prevent the select field from displaying an empty option
+  vm.user = ['preferredLanguage'];
+  vm.user.preferredLanguage = vm.currentUser.preferredLanguage;
 
   vm.updateUser = () => {
     if($stateParams && $stateParams.id !== null && $stateParams.id !== undefined){
