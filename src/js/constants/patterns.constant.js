@@ -1,6 +1,6 @@
 angular
   .module('Alfoorsa')
-  .constant('PATTERNS', regularExpression);
+  .constant('PATTERNS', regularExpression());
 
 function regularExpression(){
   // Declaración de los regex

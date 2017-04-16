@@ -12,21 +12,44 @@ function profileCtrl(CurrentUserService, $state, Multilingual, User, $stateParam
       .$promise
       .then(data => {
         vm.currentUser = data.user;
-        CurrentUserService.currentUser = data.user;
+        vm.user = ['preferredLanguage'];
+        vm.user.preferredLanguage = vm.currentUser.preferredLanguage;
         Multilingual.changeLanguage(data.user.preferredLanguage);
       }, (error) => {
         console.log(error);
       });
   }else{
     vm.currentUser = CurrentUserService.currentUser;
+    vm.user = ['preferredLanguage'];
+    vm.user.preferredLanguage = vm.currentUser.preferredLanguage;
   }
 
   vm.chooseLanguage = ['ar', 'es', 'en', 'fr'];
-  vm.fieldsSelected = ['name', 'lastname', 'phone', 'preferredLanguage'];
-  vm.PATTERNS = PATTERNS;
+  //vm.fieldsSelected = ['name', 'lastname', 'phone', 'preferredLanguage', 'email'];
+  vm.fieldsSelected =[
+    {
+      field: 'name',
+      editable: true,
+      pattern: PATTERNS.NAME
+    },{
+      field: 'lastname',
+      editable: true,
+      pattern: PATTERNS.NAME
+    },{
+      field: 'phone',
+      editable: true
+    },{
+      field: 'preferredLanguage',
+      editable: true
+    },{
+      field: 'email',
+      editable: false
+    }
+  ];
+
+  console.log(PATTERNS.NAME);
   //These 2 lines prevent the select field from displaying an empty option
-  vm.user = ['preferredLanguage'];
-  vm.user.preferredLanguage = vm.currentUser.preferredLanguage;
+
 
   vm.updateUser = () => {
     if($stateParams && $stateParams.id !== null && $stateParams.id !== undefined){

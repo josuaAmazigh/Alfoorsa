@@ -1,30 +1,30 @@
 <h1>My profile</h1>
   <ul class="list-group nopadding">
-    <li ng-repeat="field in profile.fieldsSelected" class="list-group-item border-left-0 border-rigth-0 border-bottom-0">
+    <li ng-repeat="obj in profile.fieldsSelected" class="list-group-item border-left-0 border-rigth-0 border-bottom-0">
       <div class="col-sm-3 pull-sm-{{default_float}} nopadding">
-        <strong>{{'PROFILE.'+field | uppercase | translate}}</strong>
+        <strong>{{'PROFILE.'+obj.field | uppercase | translate}}</strong>
       </div>
-      <div ng-hide="profile.editOn && profile.editableName == field" class="col-sm-6 pull-sm-{{default_float}} nopadding">
-        <span ng-if="field === 'preferredLanguage'">
+      <div ng-if="!(profile.editOn) || profile.editableName !== obj.field" class="col-sm-6 pull-sm-{{default_float}} nopadding">
+        <span ng-if="obj.field === 'preferredLanguage'">
           {{'PROFILE.LANG_'+ profile.currentUser.preferredLanguage | uppercase | translate}}
         </span>
-        <span ng-if="field !== 'preferredLanguage'">
-          {{profile.currentUser[field]}}
+        <span ng-if="obj.field !== 'preferredLanguage' ">
+          {{profile.currentUser[obj.field]}}
         </span>
       </div>
-      <div ng-show="profile.editOn && profile.editableName == field"  class="col-sm-6 pull-sm-{{default_float}} nopadding">
-        <form class="new_user gl-show-field-errors" name="profileform_{{field}}" method="post" ng-submit="profile.saveUser(field)" novalidate>
-          <select ng-model="profile.user[field]" ng-if="field === 'preferredLanguage'">
+      <div ng-if="profile.editOn && profile.editableName == obj.field"  class="col-sm-6 pull-sm-{{default_float}} nopadding">
+        <form class="new_user gl-show-field-errors" name="profileform_{{obj.field}}" method="post" ng-submit="profile.saveUser(obj.field)" novalidate>
+          <select ng-model="profile.user[obj.field]" ng-if="obj.field === 'preferredLanguage'">
             <option  ng-repeat="language in profile.chooseLanguage" value="{{language}}" ng-selected="profile.currentUser.preferredLanguage === language">{{'PROFILE.LANG_'+ language | uppercase | translate}}</option>
           </select>
-          <input ng-if="field !== 'preferredLanguage'" type="text" name="{{field}}" ng-value="profile.currentUser[field]" ng-pattern="profile.PATTERNS.NAME" ng-model="profile.user[field]">
+          <input ng-if="obj.field !== 'preferredLanguage'" type="text" name="{{obj.field}}" ng-value="profile.currentUser[obj.field]" ng-pattern="obj.pattern" ng-model="profile.user[obj.field]">
           <button ng-confirm-message="Are you sure?" >{{'PROFILE.SAVE' | translate}}</button>
           {{'PROFILE.OR' | translate}}
           <button type="reset" ng-click="profile.disableEditor()">{{'PROFILE.CANCEL' | translate}}</button>
         </form>
       </div>
-      <div ng-hide="profile.editOn && profile.editableName == field" class="col-sm-3 pull-sm-{{default_float}} nopadding">
-        <a role="button" ng-click="profile.enableEditor(field)"><i class="fa fa-pencil fa-2x"></i>{{'PROFILE.EDIT' | translate}}</a>
+      <div ng-if="!(profile.editOn && profile.editableName == obj.field)" class="col-sm-3 pull-sm-{{default_float}} nopadding">
+        <a ng-if="obj.editable" role="button" ng-click="profile.enableEditor(obj.field)"><i class="fa fa-pencil fa-2x"></i>{{'PROFILE.EDIT' | translate}}</a>
       </div>
     </li>
   </ul>
