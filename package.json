@@ -50,7 +50,7 @@
       "css": "**/*.css",
       "scss": "**/*.scss",
       "html": "**/*.html",
-      "images": "**/*.{png,jpg,jpeg,gif,ico,mp4}",
+      "images": "**/*.{png,jpg,jpeg,gif,ico,mp4,stl}",
       "fonts": "**/*.{eot,svg,ttf,woff,woff2}",
       "translations": "**/*.json"
     }
