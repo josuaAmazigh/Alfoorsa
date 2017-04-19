@@ -44,10 +44,12 @@ function profileCtrl(CurrentUserService, $state, Multilingual, User, $stateParam
     },{
       field: 'email',
       editable: false
+    },{
+      field: 'type',
+      editable: false
     }
   ];
 
-  console.log(PATTERNS.NAME);
   //These 2 lines prevent the select field from displaying an empty option
 
 
