@@ -38,4 +38,21 @@ angular
   .run(['Multilingual', '$translate', (Multilingual, $translate) => {
     const language  = $translate.storage().get($translate.storageKey());
     Multilingual.changeUIDirection(language);
+
+    function clearConsoleLog(){
+      const styleLog = `
+        font-size: 7em;
+        color: #4B0A3E;
+      `;
+      if (typeof console._commandLineAPI !== 'undefined') {
+        console.API = console._commandLineAPI;
+      } else if (typeof console._inspectorCommandLineAPI !== 'undefined') {
+        console.API = console._inspectorCommandLineAPI;
+      } else if (typeof console.clear !== 'undefined') {
+        console.API = console;
+      }
+      console.API.clear();
+      setTimeout(console.log.bind(console, '%cALفُRSA', styleLog), 0);
+    }
+    clearConsoleLog();
   }]);
